@@ -81,8 +81,8 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
 }
 
-/* Fail-safe Layer 1: hidden state only with JS */
-html.js [data-animate] {
+/* Fail-safe Layer 1: hidden state only with JS — specificity matched with .in-view */
+.js [data-animate] {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -93,7 +93,7 @@ html.js [data-animate] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js [data-animate] {
+  .js [data-animate] {
     opacity: 1;
     transform: none;
     transition: none;
