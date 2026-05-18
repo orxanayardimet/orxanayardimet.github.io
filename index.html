@@ -4,27 +4,56 @@
 <script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2B2420">
 <title>Orxan Muradov üçün yardım | 4 yaşlı körpəni xilas edək</title>
 <meta name="description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır. Hər manat onun həyatını uzada bilər.">
+<meta name="keywords" content="Orxan Muradov, Mielodisplastik Sindrom, MDS, sümük iliyi, transplantasiya, yardım, Medical Park, Antalya, Sabirabad">
+<meta name="robots" content="index, follow">
+
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://orxanayardimet.github.io/">
 <meta property="og:title" content="Orxan Muradov üçün yardım — 4 yaşlı körpəni xilas edək">
-<meta property="og:description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır.">
-<meta property="og:image" content="images/orxan-hero.jpg">
-<meta property="og:url" content="https://orxanayardimet.github.io">
+<meta property="og:description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün təcili 80.000 USD lazımdır.">
+<meta property="og:image" content="https://orxanayardimet.github.io/images/orxan-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="az_AZ">
+
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://orxanayardimet.github.io/">
 <meta name="twitter:title" content="Orxan Muradov üçün yardım">
-<meta name="twitter:description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır.">
-<meta name="twitter:image" content="images/orxan-hero.jpg">
+<meta name="twitter:description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Təcili 80.000 USD lazımdır.">
+<meta name="twitter:image" content="https://orxanayardimet.github.io/images/orxan-hero.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E89B8A'%3E%3Cpath d='M12 21s-7-4.5-9.5-9C.5 8 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.5 4 4.5 8C19 16.5 12 21 12 21z'/%3E%3C/svg%3E">
 
+<link rel="preload" as="image" href="images/orxan-hero.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.17.0/dist/tabler-icons.min.css">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+</noscript>
 
 <style>
 :root {
+  /* Orxan palette — soft coral + sage + cream (DO NOT change) */
   --bg-primary: #FBF7F0;
   --bg-surface: #FFFFFF;
   --bg-warm: #F7EFE5;
@@ -52,6 +81,10 @@
   --border-teal: rgba(90,139,130,0.2);
 
   --whatsapp: #25D366;
+  --whatsapp-hover: #1FAE5C;
+
+  /* Section transition fade zone */
+  --section-fade: 90px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,32 +99,52 @@ body {
   background: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
-
 a { color: inherit; text-decoration: none; }
-
 button { font-family: inherit; cursor: pointer; }
+p { line-height: 1.7; }
 
 h1, h2, h3, h4 {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 500;
   letter-spacing: -0.02em;
+  line-height: 1.15;
   color: var(--text-primary);
 }
 
-/* Fail-safe Layer 1: hidden state only with JS — specificity matched with .in-view */
+/* ─── SCROLL PROGRESS BAR ─── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+.scroll-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(232,155,138,0.5);
+  transition: width 0.08s ease-out;
+  will-change: width;
+}
+
+/* ─── data-animate (specificity matched) ─── */
 .js [data-animate] {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
 }
 [data-animate].in-view {
   opacity: 1;
   transform: translateY(0);
 }
-
 @media (prefers-reduced-motion: reduce) {
   .js [data-animate] {
     opacity: 1;
@@ -100,11 +153,11 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ===== Header ===== */
+/* ─── Header ─── */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 98;
   background: rgba(251,247,240,0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -134,6 +187,7 @@ h1, h2, h3, h4 {
   padding: 4px;
   background: var(--bg-dark);
   border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(43,36,32,0.15);
 }
 .lang-btn {
   background: transparent;
@@ -145,209 +199,291 @@ h1, h2, h3, h4 {
   border-radius: 100px;
   transition: all 0.2s ease;
   font-family: inherit;
+  letter-spacing: 0.05em;
 }
-.lang-btn:hover { color: rgba(255,255,255,1); }
+.lang-btn:hover {
+  color: rgba(255,255,255,1);
+  background: rgba(255,255,255,0.08);
+}
 .lang-btn.active {
   background: var(--accent);
   color: white;
   font-weight: 600;
 }
 
-/* ===== Hero ===== */
+/* ─── HERO with vignette ─── */
 .hero {
   position: relative;
-  min-height: 90vh;
-  background-image: linear-gradient(180deg, rgba(43,36,32,0.45) 0%, rgba(43,36,32,0.55) 50%, rgba(43,36,32,0.88) 100%), url('images/orxan-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-color: var(--bg-dark);
+  min-height: 92vh;
+  padding: 6rem 1.5rem 4rem;
+  overflow: hidden;
+  color: white;
+  background: var(--bg-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
-  text-align: center;
-  color: white;
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/orxan-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1.02) saturate(0.94) brightness(1.02);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.4) 100%),
+    linear-gradient(180deg, rgba(43,36,32,0.45) 0%, rgba(43,36,32,0.55) 50%, rgba(43,36,32,0.88) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero > * { position: relative; z-index: 2; }
+
 .hero-inner {
   max-width: 720px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
 .hero-eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  color: var(--accent-soft);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  color: var(--accent-soft);
+  margin: 0 0 1rem;
 }
-.date-badge {
+
+.hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: white;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  margin: 0;
+}
+.hero h1 em {
+  color: var(--accent-soft);
+  font-style: italic;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.hero-sub {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  max-width: 620px;
+  margin: 1.75rem auto 0;
+}
+
+/* Trust pill — top-right of hero */
+.photo-trust-pill {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(255,255,255,0.95);
+  color: var(--accent-text);
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(43,36,32,0.15);
+}
+.photo-trust-pill i { font-size: 14px; color: var(--accent); }
+
+/* Date badge — below trust pill, top-right */
+.hero-date-badge {
+  position: absolute;
+  top: calc(20px + 36px + 14px);
+  right: 20px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 0.5px solid rgba(255,255,255,0.25);
-  padding: 6px 14px;
+  border: 0.5px solid rgba(255,255,255,0.2);
   border-radius: 100px;
+  padding: 6px 14px;
+  color: rgba(255,255,255,0.95);
   font-size: 0.8125rem;
-  color: rgba(255,255,255,0.95);
-  margin-bottom: 2rem;
 }
-.date-badge i { font-size: 14px; }
-.date-badge .date-label { color: rgba(255,255,255,0.7); }
-.hero h1 {
-  font-size: 3.25rem;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: white;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-  margin-bottom: 1.25rem;
-}
-.hero-sub {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  max-width: 580px;
-}
+.hero-date-badge i { font-size: 14px; color: var(--accent); }
+.hero-date-label { font-weight: 400; opacity: 0.85; }
+.hero-date-value { font-weight: 500; }
+
+/* Hero story link with animated chevrons */
 .hero-story-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-top: 3rem;
-  color: white;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.2s ease;
 }
-.hero-story-link span {
+.hero-story-link:hover { color: white; }
+.hero-story-text {
   font-size: 0.8125rem;
-  letter-spacing: 0.2em;
   font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 .chevron-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
   line-height: 0.6;
 }
 .chevron-stack i {
-  font-size: 20px;
-  animation: chevron-bounce 1.6s ease-in-out infinite;
+  font-size: 22px;
+  animation: chevron-bounce 2s ease-in-out infinite;
 }
 .chevron-stack i:nth-child(2) {
   animation-delay: 0.2s;
   opacity: 0.4;
+  margin-top: -8px;
 }
 @keyframes chevron-bounce {
   0%, 100% { transform: translateY(0); opacity: 0.5; }
-  50% { transform: translateY(4px); opacity: 1; }
+  50%      { transform: translateY(4px); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .chevron-stack i { animation: none; }
-}
-@media (max-width: 768px) {
-  .hero { min-height: 85vh; padding: 3rem 1rem; }
-  .hero h1 { font-size: 2.25rem; }
-  .hero-sub { font-size: 1rem; }
+  .chevron-stack i { animation: none; opacity: 0.7; }
 }
 
-/* ===== Stats ===== */
-.stats {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+@media (max-width: 768px) {
+  :root { --section-fade: 56px; }
+  .hero { min-height: 88vh; padding: 5rem 1rem 3rem; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero-sub { font-size: 1rem; margin-top: 1.25rem; }
+  .hero-eyebrow { font-size: 0.65rem; }
+  .photo-trust-pill {
+    top: 16px; right: 16px;
+    font-size: 0.7rem; padding: 5px 11px;
+  }
+  .photo-trust-pill i { font-size: 12px; }
+  .hero-date-badge {
+    top: calc(16px + 32px + 12px);
+    right: 16px;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  .hero-date-badge i { font-size: 12px; }
+  .hero-story-link { margin-top: 2.25rem; gap: 0.75rem; }
+  .hero-story-text { font-size: 0.75rem; }
 }
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+
+/* ─── STORY (with stats inside) ─── */
+.story {
+  padding: 4rem 1.5rem;
+  background: var(--bg-primary);
 }
-.stat-card {
-  background: var(--bg-surface);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1.25rem 1rem;
-  text-align: center;
-}
-.stat-card.urgent {
-  background: var(--accent-bg);
-  border-color: var(--border-accent);
-}
-.stat-num {
+.story-inner { max-width: 720px; margin: 0 auto; }
+.section-heading {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 500;
   font-size: 2rem;
-  line-height: 1;
-  color: var(--text-primary);
-}
-.stat-card.urgent .stat-num { color: var(--accent); }
-.stat-unit {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-left: 4px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-}
-.stat-label {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-@media (max-width: 640px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-num { font-size: 1.75rem; }
-}
-
-/* ===== Sections common ===== */
-.section {
-  padding: 4rem 1.5rem;
-}
-@media (max-width: 768px) {
-  .section { padding: 2.5rem 1rem; }
-}
-.section-narrow {
-  max-width: 720px;
-  margin: 0 auto;
-}
-.section-wide {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-.section-heading {
-  font-size: 2rem;
   text-align: center;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
-}
-@media (max-width: 768px) {
-  .section-heading { font-size: 1.5rem; }
-}
-.accent-line {
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
-  margin: 0 auto 2.5rem;
 }
 .section-subtitle {
   text-align: center;
   color: var(--text-muted);
   font-size: 1rem;
-  margin-bottom: 2.5rem;
-  margin-top: -1.5rem;
+  margin-bottom: 0.75rem;
+}
+.accent-line {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0.75rem auto 2rem;
 }
 
-/* ===== Story ===== */
+/* Unified stats inside story */
+.unified-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0.5rem 0 3rem;
+}
+.u-stat {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF4ED 100%);
+  border: 0.5px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.u-stat:not(.highlight):hover { transform: translateY(-1px); }
+.u-stat:hover { border-color: var(--border-accent); }
+.u-stat.highlight {
+  background: linear-gradient(180deg, #FFF6F1 0%, var(--accent-bg) 100%);
+  border-color: var(--border-accent);
+}
+.u-stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  font-feature-settings: 'tnum';
+}
+.u-stat.highlight .u-stat-num { color: var(--accent-text); }
+.u-stat-unit {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+  font-weight: 500;
+}
+.u-stat.highlight .u-stat-unit { color: var(--accent-text); opacity: 0.85; }
+.u-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+@media (max-width: 640px) {
+  .unified-stats { grid-template-columns: repeat(2, 1fr); }
+  .u-stat-num { font-size: 1.625rem; }
+}
+
+/* Story body */
 .story-body p {
-  font-weight: 450;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 1.0625rem;
   line-height: 1.8;
   color: var(--text-body);
@@ -357,60 +493,20 @@ h1, h2, h3, h4 {
   .story-body p { font-size: 1rem; }
 }
 
-/* ===== Impact ===== */
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.impact-card {
-  background: var(--bg-surface);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.impact-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-accent);
-  box-shadow: 0 8px 24px rgba(232,155,138,0.12);
-}
-.impact-amount {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  font-size: 1.75rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
-}
-.impact-desc {
-  font-size: 0.875rem;
-  color: var(--text-body);
-  line-height: 1.5;
-}
-@media (max-width: 900px) {
-  .impact-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .impact-grid { grid-template-columns: 1fr; }
-}
-
-/* ===== Quote ===== */
-.quote-card {
+/* Pull-quote inline in story */
+.pull-quote {
   position: relative;
+  margin: 2.5rem 0;
+  padding: 1.75rem 1.5rem 1.75rem 2rem;
   background: var(--bg-warm);
-  border-radius: 12px;
-  padding: 1.75rem;
   border-left: 3px solid var(--accent);
-  max-width: 720px;
-  margin: 0 auto;
+  border-radius: 0 12px 12px 0;
 }
-.quote-card::before {
+.pull-quote::before {
   content: '\201C';
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 0.5rem;
+  right: 1rem;
   font-family: 'Fraunces', Georgia, serif;
   font-size: 4rem;
   color: var(--accent-soft);
@@ -418,66 +514,78 @@ h1, h2, h3, h4 {
   line-height: 1;
   pointer-events: none;
 }
-.quote-text {
+.pull-quote p {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
   font-size: 1.125rem;
   color: var(--text-primary);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin: 0;
   position: relative;
   z-index: 1;
 }
-.quote-divider {
-  height: 1px;
-  background: rgba(232,155,138,0.15);
-  margin-bottom: 1rem;
-}
-.quote-attrib {
+
+/* Story-end attribution (letter signature feel) */
+.story-end-attribution {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(232,155,138,0.2);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.875rem;
   flex-wrap: wrap;
+  font-style: normal;
 }
-.quote-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  font-size: 1.125rem;
-  flex-shrink: 0;
-}
-.quote-attrib-name {
-  font-size: 0.95rem;
-  font-weight: 500;
+.pq-info { display: flex; flex-direction: column; gap: 1px; }
+.pq-info strong {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.2;
 }
-.quote-attrib-role {
-  font-size: 0.8rem;
+.pq-info span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 2px;
 }
-.quote-verified {
+.pq-verified {
+  margin-left: auto;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  margin-left: auto;
-  color: var(--text-muted);
+  gap: 6px;
   font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
-.quote-verified i {
-  font-size: 14px;
-  color: var(--accent);
+.pq-verified i { font-size: 14px; color: var(--accent); }
+@media (max-width: 768px) {
+  .story-end-attribution {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    gap: 0.75rem;
+  }
+  .pq-verified { margin-left: 0; }
 }
 
-/* ===== Gallery ===== */
+/* ─── Sections with fade transitions ─── */
+.section { padding: 4rem 1.5rem; }
+.section-wide { max-width: 1080px; margin: 0 auto; }
+@media (max-width: 768px) { .section { padding: 2.5rem 1rem; } }
+
+.gallery {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-surface) var(--section-fade), var(--bg-surface) 100%);
+}
+.transparency {
+  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-warm) var(--section-fade), var(--bg-warm) 100%);
+}
+.donation-impact {
+  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-primary) var(--section-fade), var(--bg-primary) 100%);
+}
+.donation {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--accent-bg) var(--section-fade), var(--accent-bg) 100%);
+}
+
+/* ─── Gallery ─── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -497,31 +605,27 @@ h1, h2, h3, h4 {
   filter: contrast(1.02) saturate(0.92) brightness(1.02);
   transition: transform 0.4s ease;
 }
-.gallery-item:hover img {
-  transform: scale(1.03);
-}
-@media (max-width: 900px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-}
+.gallery-item:hover img,
+.gallery-item:focus-visible img { transform: scale(1.03); }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
 
-/* ===== Transparency ===== */
+/* ─── Transparency ─── */
 .transparency-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .doc-card {
-  background: var(--bg-surface);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
   border: 0.5px solid var(--border-subtle);
   border-radius: 12px;
   padding: 1rem;
   cursor: zoom-in;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
-.doc-card:hover {
+.doc-card:hover,
+.doc-card:focus-visible {
   transform: translateY(-2px);
   border-color: var(--border-accent);
 }
@@ -548,23 +652,61 @@ h1, h2, h3, h4 {
   text-underline-offset: 3px;
 }
 .doc-pdf-link:hover { color: var(--accent-hover); }
-@media (max-width: 800px) {
-  .transparency-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 800px) { .transparency-grid { grid-template-columns: 1fr; } }
 
-/* ===== Bank cards ===== */
+/* ─── Donation impact ─── */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.impact-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
+  border: 0.5px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.impact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: 0 8px 24px rgba(232,155,138,0.12);
+}
+.impact-amount {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.impact-desc {
+  font-size: 0.875rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+@media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .impact-grid { grid-template-columns: 1fr; } }
+
+/* ─── Bank cards ─── */
 .bank-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 .bank-card {
-  background: var(--bg-surface);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
   border: 0.5px solid var(--border-subtle);
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bank-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(43,36,32,0.08);
 }
 .bank-card-accent {
   height: 4px;
@@ -614,9 +756,7 @@ h1, h2, h3, h4 {
   margin-bottom: 0.75rem;
 }
 .copy-btn-full:hover { background: var(--accent-hover); }
-.copy-btn-full.copied {
-  background: #1A9550;
-}
+.copy-btn-full.copied { background: #1A9550; }
 .copy-btn-full i { font-size: 16px; }
 .card-holder {
   text-align: center;
@@ -624,14 +764,10 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
   margin-top: auto;
 }
-@media (max-width: 900px) {
-  .bank-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .bank-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 900px) { .bank-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .bank-grid { grid-template-columns: 1fr; } }
 
-/* ===== Footer ===== */
+/* ─── Footer ─── */
 .site-footer {
   background: var(--bg-dark);
   color: var(--text-on-dark);
@@ -660,7 +796,6 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   color: rgba(255,255,255,0.8);
-  background: transparent;
   transition: all 0.2s ease;
 }
 .social-btn:hover {
@@ -674,7 +809,7 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* ===== Floating CTAs ===== */
+/* ─── Floating CTAs ─── */
 .floating-ctas {
   position: fixed;
   bottom: 24px;
@@ -688,53 +823,61 @@ h1, h2, h3, h4 {
 .cta-cards {
   background: var(--accent);
   color: white;
-  padding: 12px 20px;
+  padding: 14px 24px;
   border-radius: 100px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 500;
-  font-size: 0.9375rem;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
   box-shadow: 0 4px 16px rgba(232,155,138,0.4);
-  animation: soft-pulse 2.2s ease-in-out infinite;
-  border: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
+  animation: soft-pulse 2s ease-in-out infinite;
 }
-.cta-cards:hover { background: var(--accent-hover); }
+.cta-cards:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .cta-cards i { font-size: 18px; }
 @keyframes soft-pulse {
-  0%, 100% {
-    box-shadow: 0 4px 16px rgba(232,155,138,0.4), 0 0 0 0 rgba(232,155,138,0.4);
-  }
-  50% {
-    box-shadow: 0 4px 20px rgba(232,155,138,0.5), 0 0 0 8px rgba(232,155,138,0);
-  }
+  0%, 100% { box-shadow: 0 4px 16px rgba(232,155,138,0.4), 0 0 0 0 rgba(232,155,138,0.4); }
+  50%      { box-shadow: 0 4px 20px rgba(232,155,138,0.5), 0 0 0 8px rgba(232,155,138,0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .cta-cards { animation: none; }
 }
+
 .cta-whatsapp {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
   background: var(--whatsapp);
+  color: white;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+  animation-delay: 1s;
 }
-.cta-whatsapp:hover { transform: scale(1.05); }
-.cta-whatsapp i { font-size: 28px; }
-@media (max-width: 640px) {
+.cta-whatsapp:hover { transform: translateY(-2px); background: var(--whatsapp-hover); }
+.cta-whatsapp i { font-size: 32px; }
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(37,211,102,0.3), 0 0 0 0 rgba(37,211,102,0.5); }
+  50%      { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 10px rgba(37,211,102,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-whatsapp { animation: none; }
+}
+@media (max-width: 768px) {
   .floating-ctas { bottom: 16px; right: 16px; gap: 12px; }
-  .cta-cards { padding: 10px 16px; font-size: 0.875rem; }
-  .cta-whatsapp { width: 56px; height: 56px; }
-  .cta-whatsapp i { font-size: 24px; }
+  .cta-cards { padding: 12px 20px; font-size: 0.9375rem; }
+  .cta-cards i { font-size: 16px; }
+  .cta-whatsapp { width: 64px; height: 64px; }
+  .cta-whatsapp i { font-size: 28px; }
 }
 
-/* ===== Lightbox ===== */
+/* ─── Lightbox with prev/next nav ─── */
 .lightbox {
   display: none;
   position: fixed;
@@ -747,64 +890,108 @@ h1, h2, h3, h4 {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
-.lightbox.open {
-  display: flex;
-  opacity: 1;
-}
+.lightbox.active { display: flex; opacity: 1; }
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
   border-radius: 6px;
+  user-select: none;
 }
-.lightbox-close {
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  background: transparent;
+  background: rgba(0,0,0,0.3);
   color: white;
   border: 0.5px solid rgba(255,255,255,0.4);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   line-height: 1;
+  transition: background 0.2s ease;
 }
-.lightbox-close:hover {
-  background: rgba(255,255,255,0.1);
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover { background: rgba(255,255,255,0.15); }
+.lightbox-close { top: 1.25rem; right: 1.25rem; }
+.lightbox-prev { top: 50%; left: 1.25rem; transform: translateY(-50%); }
+.lightbox-next { top: 50%; right: 1.25rem; transform: translateY(-50%); }
+.lightbox-prev i,
+.lightbox-next i { font-size: 24px; }
+@media (max-width: 600px) {
+  .lightbox-prev { left: 0.75rem; }
+  .lightbox-next { right: 0.75rem; }
 }
+
+/* ─── Toast notification (for copy feedback) ─── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(43,36,32,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 70;
+  max-width: 90vw;
+  text-align: center;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.toast.error { background: #B14238; }
 </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
+<!-- Scroll progress bar -->
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+</div>
+
+<!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <a href="#" class="logo" aria-label="Orxan"><span class="accent-letter">O</span>rxan.</a>
     <div class="lang-switcher" role="group" aria-label="Language">
       <button class="lang-btn active" data-lang="az" type="button">AZ</button>
+      <button class="lang-btn" data-lang="tr" type="button">TR</button>
       <button class="lang-btn" data-lang="ru" type="button">RU</button>
       <button class="lang-btn" data-lang="en" type="button">EN</button>
     </div>
   </div>
 </header>
 
-<!-- ===== Hero ===== -->
+<!-- HERO with vignette + verified pill + date badge -->
 <section class="hero">
+  <div class="photo-trust-pill">
+    <i class="ti ti-shield-check" aria-hidden="true"></i>
+    <span data-i18n="verified">Doğrulanıb</span>
+  </div>
+  <div class="hero-date-badge">
+    <i class="ti ti-calendar" aria-hidden="true"></i>
+    <span class="hero-date-label" data-i18n="heroDateLabel">Son yenilənmə</span>
+    <span class="hero-date-value" id="dateValue">18 May 2026</span>
+  </div>
   <div class="hero-inner">
-    <div class="hero-eyebrow" data-i18n="hero.eyebrow">ORXAN MURADOV</div>
-    <div class="date-badge">
-      <i class="ti ti-calendar" aria-hidden="true"></i>
-      <span class="date-label" data-i18n="hero.dateLabel">Son yenilənmə</span>
-      <span class="date-value" id="dateValue">18 May 2026</span>
-    </div>
-    <h1 data-i18n="hero.headline">Hələ dünyaya yeni gəlmişdi...</h1>
-    <p class="hero-sub" data-i18n="hero.sub">4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.</p>
+    <div class="hero-eyebrow" data-i18n="heroEyebrow">ORXAN MURADOV</div>
+    <h1 data-i18n-html="heroTitle">Hələ dünyaya yeni gəlmişdi...</h1>
+    <p class="hero-sub" data-i18n="heroSubtitle">4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.</p>
     <a href="#story" class="hero-story-link">
-      <span data-i18n="hero.cta">ORXANIN HEKAYƏSİNİ OXU</span>
+      <span class="hero-story-text" data-i18n="heroStoryLink">ORXANIN HEKAYƏSİNİ OXU</span>
       <span class="chevron-stack" aria-hidden="true">
         <i class="ti ti-chevron-down"></i>
         <i class="ti ti-chevron-down"></i>
@@ -813,132 +1000,138 @@ h1, h2, h3, h4 {
   </div>
 </section>
 
-<!-- ===== Stats ===== -->
-<section class="stats">
-  <div class="stats-grid">
-    <div class="stat-card" data-animate style="transition-delay:0ms">
-      <span class="stat-num">4</span>
-      <span class="stat-label" data-i18n="stats.age">YAŞ</span>
+<!-- STORY (with stats inside, pull-quote, end attribution) -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <h2 class="section-heading" data-i18n="storyTitle" data-animate>Orxanın Hekayəsi</h2>
+    <div class="accent-line"></div>
+
+    <!-- Unified stats inside story -->
+    <div class="unified-stats" role="region" aria-label="Statistika" data-animate>
+      <div class="u-stat">
+        <span class="u-stat-num" data-i18n-html="stat1Num">4</span>
+        <span class="u-stat-label" data-i18n="stat1Label">YAŞ</span>
+      </div>
+      <div class="u-stat">
+        <span class="u-stat-num" data-i18n-html="stat2Num">3</span>
+        <span class="u-stat-label" data-i18n="stat2Label">AY MÜBARİZƏ</span>
+      </div>
+      <div class="u-stat highlight">
+        <span class="u-stat-num" data-i18n-html="stat3Num">80.000<span class="u-stat-unit">$</span></span>
+        <span class="u-stat-label" data-i18n="stat3Label">TƏCİLİ LAZIM</span>
+      </div>
+      <div class="u-stat">
+        <span class="u-stat-num" data-i18n-html="stat4Num">1</span>
+        <span class="u-stat-label" data-i18n="stat4Label">BİR HƏYAT</span>
+      </div>
     </div>
-    <div class="stat-card" data-animate style="transition-delay:100ms">
-      <span class="stat-num">3</span>
-      <span class="stat-label" data-i18n="stats.months">AY MÜBARİZƏ</span>
-    </div>
-    <div class="stat-card urgent" data-animate style="transition-delay:200ms">
-      <span class="stat-num">80.000<span class="stat-unit">$</span></span>
-      <span class="stat-label" data-i18n="stats.needed">TƏCİLİ LAZIM</span>
-    </div>
-    <div class="stat-card" data-animate style="transition-delay:300ms">
-      <span class="stat-num">1</span>
-      <span class="stat-label" data-i18n="stats.life">BİR HƏYAT</span>
+
+    <!-- Story body part 1 -->
+    <div class="story-body" data-animate>
+      <div data-i18n-html="storyHtml1">
+        <p>Orxan Muradov hələ 4 yaşındadır. Onun dünyası oyuncaqlarla, gülüşlərlə, kiçik kəşflərlə dolu olmalıydı.</p>
+        <p>Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.</p>
+        <p>Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.</p>
+      </div>
+
+      <!-- Mother's pull-quote inline -->
+      <blockquote class="pull-quote" data-animate>
+        <p data-i18n="motherQuote">Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?</p>
+      </blockquote>
+
+      <!-- Story body part 2 -->
+      <div data-i18n-html="storyHtml2">
+        <p>Yeganə yol qohum olmayan donordan sümük iliyi transplantasiyasıdır. Medical Park Antalya xəstəxanasında Prof. Dr. Akif Yeşilipek müalicəni qəbul edib. Ümumi xərc: 80.000 USD.</p>
+        <p>Ailəsi Sabirabad rayonu, Məmişlər kəndində yaşayır. Bu məbləği ödəmək imkanları yoxdur. Anası Zinyət gecə-gündüz onun yanındadır. Atası Nuru çalışıb-çabalayır, amma bu rəqəm onların gücündən qat-qat çoxdur.</p>
+        <p>İndi Orxanın ümidi sizdə — bizdədir. Hər manat onun nəfəs alma şansını artırır.</p>
+      </div>
+
+      <!-- Story-end attribution (letter signature) -->
+      <cite class="story-end-attribution" data-animate>
+        <div class="pq-info">
+          <strong data-i18n="motherName">Abdullazadə Zinyət</strong>
+          <span data-i18n="motherRole">Orxanın anası</span>
+        </div>
+        <div class="pq-verified">
+          <i class="ti ti-shield-check" aria-hidden="true"></i>
+          <span data-i18n="verified">Yoxlanılıb</span>
+        </div>
+      </cite>
     </div>
   </div>
 </section>
 
-<!-- ===== Story ===== -->
-<section class="section section-narrow" id="story" data-animate>
-  <h2 class="section-heading" data-i18n="story.title">Orxanın Hekayəsi</h2>
+<!-- GALLERY -->
+<section class="gallery section section-wide">
+  <h2 class="section-heading" data-i18n="galleryTitle" data-animate>Orxanın gözündən</h2>
   <div class="accent-line"></div>
-  <div class="story-body">
-    <p data-i18n="story.p1">Orxan Muradov hələ 4 yaşındadır. Onun dünyası oyuncaqlarla, gülüşlərlə, kiçik kəşflərlə dolu olmalıydı.</p>
-    <p data-i18n="story.p2">Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.</p>
-    <p data-i18n="story.p3">Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.</p>
-    <p data-i18n="story.p4">Yeganə yol qohum olmayan donordan sümük iliyi transplantasiyasıdır. Medical Park Antalya xəstəxanasında Prof. Dr. Akif Yeşilipek müalicəni qəbul edib. Ümumi xərc: 80.000 USD.</p>
-    <p data-i18n="story.p5">Ailəsi Sabirabad rayonu, Məmişlər kəndində yaşayır. Bu məbləği ödəmək imkanları yoxdur. Anası Zinyət gecə-gündüz onun yanındadır. Atası Nuru çalışıb-çabalayır, amma bu rəqəm onların gücündən qat-qat çoxdur.</p>
-    <p data-i18n="story.p6">İndi Orxanın ümidi sizdə — bizdədir. Hər manat onun nəfəs alma şansını artırır.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item" data-img="images/orxan-1.jpg" data-animate style="transition-delay:0ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-1.jpg" alt="Orxan">
+    </div>
+    <div class="gallery-item" data-img="images/orxan-2.jpg" data-animate style="transition-delay:100ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-2.jpg" alt="Orxan">
+    </div>
+    <div class="gallery-item" data-img="images/orxan-3.jpg" data-animate style="transition-delay:200ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-3.jpg" alt="Orxan">
+    </div>
+    <div class="gallery-item" data-img="images/orxan-4.jpg" data-animate style="transition-delay:300ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-4.jpg" alt="Orxan">
+    </div>
   </div>
 </section>
 
-<!-- ===== Impact ===== -->
-<section class="section section-wide">
-  <h2 class="section-heading" data-i18n="impact.title">Bir bağışın həqiqi gücü</h2>
-  <p class="section-subtitle" data-i18n="impact.subtitle">Hər manat Orxanın müalicəsinə birbaşa təsir edir</p>
+<!-- TRANSPARENCY -->
+<section class="transparency section section-wide">
+  <h2 class="section-heading" data-i18n="transparencyTitle" data-animate>Şəffaflıq</h2>
+  <p class="section-subtitle" data-i18n="transparencySubtitle">Hər sənəd doğrudur və yoxlanıla bilər</p>
+  <div class="accent-line"></div>
+  <div class="transparency-grid">
+    <div class="doc-card" data-img="documents/medical-park-paket.jpg" data-animate style="transition-delay:0ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
+      <img class="doc-thumb" src="documents/medical-park-paket.jpg" alt="Medical Park">
+      <div class="doc-label" data-i18n="doc1Label">Medical Park müalicə paketi · 80.000 USD</div>
+      <a class="doc-pdf-link" href="documents/medical-park-paket.pdf" target="_blank" rel="noopener" data-i18n="pdfLink">PDF formatında bütün sənəd</a>
+    </div>
+    <div class="doc-card" data-img="documents/histoloji-mds-diaqnoz.jpg" data-animate style="transition-delay:100ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
+      <img class="doc-thumb" src="documents/histoloji-mds-diaqnoz.jpg" alt="Histoloji">
+      <div class="doc-label" data-i18n="doc2Label">Histoloji müayinə №140/26 · MDS təsdiqi</div>
+    </div>
+    <div class="doc-card" data-img="documents/qan-analizi.jpg" data-animate style="transition-delay:200ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
+      <img class="doc-thumb" src="documents/qan-analizi.jpg" alt="Qan analizi">
+      <div class="doc-label" data-i18n="doc3Label">Klinik qan analizi · 14.05.2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="donation-impact section section-wide">
+  <h2 class="section-heading" data-i18n="impactTitle" data-animate>Bir bağışın həqiqi gücü</h2>
+  <p class="section-subtitle" data-i18n="impactSubtitle">Hər manat Orxanın müalicəsinə birbaşa təsir edir</p>
   <div class="accent-line"></div>
   <div class="impact-grid">
     <div class="impact-card" data-animate style="transition-delay:0ms">
       <div class="impact-amount">20 AZN</div>
-      <div class="impact-desc" data-i18n="impact.c1">Bir gün üçün dərman dozası</div>
+      <div class="impact-desc" data-i18n="impactDesc1">Bir gün üçün dərman dozası</div>
     </div>
     <div class="impact-card" data-animate style="transition-delay:100ms">
       <div class="impact-amount">100 AZN</div>
-      <div class="impact-desc" data-i18n="impact.c2">Bir tibbi müayinə</div>
+      <div class="impact-desc" data-i18n="impactDesc2">Bir tibbi müayinə</div>
     </div>
     <div class="impact-card" data-animate style="transition-delay:200ms">
       <div class="impact-amount">500 AZN</div>
-      <div class="impact-desc" data-i18n="impact.c3">Bir həftəlik xəstəxana xərci</div>
+      <div class="impact-desc" data-i18n="impactDesc3">Bir həftəlik xəstəxana xərci</div>
     </div>
     <div class="impact-card" data-animate style="transition-delay:300ms">
       <div class="impact-amount">2000 AZN</div>
-      <div class="impact-desc" data-i18n="impact.c4">Transplantasiya öncəsi hazırlıq</div>
+      <div class="impact-desc" data-i18n="impactDesc4">Transplantasiya öncəsi hazırlıq</div>
     </div>
   </div>
 </section>
 
-<!-- ===== Quote ===== -->
-<section class="section" data-animate>
-  <div class="quote-card">
-    <p class="quote-text" data-i18n="quote.text">Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?</p>
-    <div class="quote-divider"></div>
-    <div class="quote-attrib">
-      <div class="quote-avatar" aria-hidden="true">Z</div>
-      <div>
-        <div class="quote-attrib-name" data-i18n="quote.name">Abdullazadə Zinyət</div>
-        <div class="quote-attrib-role" data-i18n="quote.role">Orxanın anası</div>
-      </div>
-      <div class="quote-verified">
-        <i class="ti ti-shield-check" aria-hidden="true"></i>
-        <span data-i18n="quote.verified">Yoxlanılıb</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Gallery ===== -->
-<section class="section section-wide">
-  <h2 class="section-heading" data-i18n="gallery.title">Orxanın gözündən</h2>
-  <div class="accent-line"></div>
-  <div class="gallery-grid">
-    <div class="gallery-item" data-animate style="transition-delay:0ms">
-      <img src="images/orxan-1.jpg" alt="Orxan" data-lightbox>
-    </div>
-    <div class="gallery-item" data-animate style="transition-delay:100ms">
-      <img src="images/orxan-2.jpg" alt="Orxan" data-lightbox>
-    </div>
-    <div class="gallery-item" data-animate style="transition-delay:200ms">
-      <img src="images/orxan-3.jpg" alt="Orxan" data-lightbox>
-    </div>
-    <div class="gallery-item" data-animate style="transition-delay:300ms">
-      <img src="images/orxan-4.jpg" alt="Orxan" data-lightbox>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Transparency ===== -->
-<section class="section section-wide">
-  <h2 class="section-heading" data-i18n="transparency.title">Şəffaflıq</h2>
-  <p class="section-subtitle" data-i18n="transparency.subtitle">Hər sənəd doğrudur və yoxlanıla bilər</p>
-  <div class="accent-line"></div>
-  <div class="transparency-grid">
-    <div class="doc-card" data-animate style="transition-delay:0ms">
-      <img class="doc-thumb" src="documents/medical-park-paket.jpg" alt="Medical Park" data-lightbox>
-      <div class="doc-label" data-i18n="transparency.d1">Medical Park müalicə paketi · 80.000 USD</div>
-      <a class="doc-pdf-link" href="documents/medical-park-paket.pdf" target="_blank" rel="noopener" data-i18n="transparency.pdf">PDF formatında bütün sənəd</a>
-    </div>
-    <div class="doc-card" data-animate style="transition-delay:100ms">
-      <img class="doc-thumb" src="documents/histoloji-mds-diaqnoz.jpg" alt="Histoloji" data-lightbox>
-      <div class="doc-label" data-i18n="transparency.d2">Histoloji müayinə №140/26 · MDS təsdiqi</div>
-    </div>
-    <div class="doc-card" data-animate style="transition-delay:200ms">
-      <img class="doc-thumb" src="documents/qan-analizi.jpg" alt="Qan analizi" data-lightbox>
-      <div class="doc-label" data-i18n="transparency.d3">Klinik qan analizi · 14.05.2026</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Bank cards ===== -->
-<section class="section section-wide" id="bank-cards">
-  <h2 class="section-heading" data-i18n="bank.title">Bağışla</h2>
-  <p class="section-subtitle" data-i18n="bank.subtitle">Hər kart Orxanın anası Zinyət xanımın adınadır</p>
+<!-- DONATION / BANK CARDS -->
+<section class="donation section section-wide" id="donation">
+  <h2 class="section-heading" data-i18n="donationTitle" data-animate>Bağışla</h2>
+  <p class="section-subtitle" data-i18n="donationSubtitle">Hər kart Orxanın anası Zinyət xanımın adınadır</p>
   <div class="accent-line"></div>
   <div class="bank-grid">
     <div class="bank-card" data-animate style="transition-delay:0ms">
@@ -948,11 +1141,11 @@ h1, h2, h3, h4 {
         <div class="card-number-box">
           <div class="card-number">4169 7388 0906 1637</div>
         </div>
-        <button class="copy-btn-full" type="button" data-copy="4169738809061637">
+        <button class="copy-btn-full" type="button" data-card="4169738809061637">
           <i class="ti ti-copy" aria-hidden="true"></i>
-          <span data-i18n="bank.copy">Kopyala</span>
+          <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="bank.holder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
+        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
     <div class="bank-card" data-animate style="transition-delay:100ms">
@@ -962,11 +1155,11 @@ h1, h2, h3, h4 {
         <div class="card-number-box">
           <div class="card-number">4127 2093 0893 8742</div>
         </div>
-        <button class="copy-btn-full" type="button" data-copy="4127209308938742">
+        <button class="copy-btn-full" type="button" data-card="4127209308938742">
           <i class="ti ti-copy" aria-hidden="true"></i>
-          <span data-i18n="bank.copy">Kopyala</span>
+          <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="bank.holder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
+        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
     <div class="bank-card" data-animate style="transition-delay:200ms">
@@ -976,190 +1169,242 @@ h1, h2, h3, h4 {
         <div class="card-number-box">
           <div class="card-number">4098 5844 9938 0952</div>
         </div>
-        <button class="copy-btn-full" type="button" data-copy="4098584499380952">
+        <button class="copy-btn-full" type="button" data-card="4098584499380952">
           <i class="ti ti-copy" aria-hidden="true"></i>
-          <span data-i18n="bank.copy">Kopyala</span>
+          <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="bank.holder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
+        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
+<!-- Footer -->
 <footer class="site-footer" data-animate>
-  <div class="footer-line" data-i18n="footer.line">Orxan üçün dua, dəstək, sevgi.</div>
+  <div class="footer-line" data-i18n="footerMessage">Orxan üçün dua, dəstək, sevgi.</div>
   <div class="footer-social">
     <a class="social-btn" href="https://wa.me/994703955854" target="_blank" rel="noopener" aria-label="WhatsApp">
       <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
     </a>
   </div>
-  <div class="copyright" data-i18n="footer.copy">© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi</div>
+  <div class="copyright" data-i18n="footerCopy">© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi</div>
 </footer>
 
-<!-- ===== Floating CTAs ===== -->
-<div class="floating-ctas">
-  <a href="#bank-cards" class="cta-cards" id="ctaCards">
+<!-- Floating CTAs -->
+<div class="floating-ctas" role="region" aria-label="Sürətli kömək">
+  <a href="#donation" class="cta-cards">
     <i class="ti ti-credit-card" aria-hidden="true"></i>
-    <span data-i18n="cta.cards">Kart hesabları</span>
+    <span data-i18n="floatingCardBtn">Kart hesabları</span>
   </a>
   <a href="https://wa.me/994703955854" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
   </a>
 </div>
 
-<!-- ===== Lightbox ===== -->
+<!-- Lightbox -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
   <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous">
+    <i class="ti ti-chevron-left" aria-hidden="true"></i>
+  </button>
+  <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next">
+    <i class="ti ti-chevron-right" aria-hidden="true"></i>
+  </button>
   <img id="lightboxImg" src="" alt="">
 </div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function () {
   'use strict';
 
   const HARDCODED_DATE = '2026-05-18';
+  const STAT_TARGETS = [4, 3, 80000, 1];
+  const HTML_KEYS = new Set([
+    'heroTitle', 'storyHtml1', 'storyHtml2',
+    'stat1Num', 'stat2Num', 'stat3Num', 'stat4Num'
+  ]);
 
   const translations = {
     az: {
-      'hero.eyebrow': 'ORXAN MURADOV',
-      'hero.dateLabel': 'Son yenilənmə',
-      'hero.headline': 'Hələ dünyaya yeni gəlmişdi...',
-      'hero.sub': '4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.',
-      'hero.cta': 'ORXANIN HEKAYƏSİNİ OXU',
-      'stats.age': 'YAŞ',
-      'stats.months': 'AY MÜBARİZƏ',
-      'stats.needed': 'TƏCİLİ LAZIM',
-      'stats.life': 'BİR HƏYAT',
-      'story.title': 'Orxanın Hekayəsi',
-      'story.p1': 'Orxan Muradov hələ 4 yaşındadır. Onun dünyası oyuncaqlarla, gülüşlərlə, kiçik kəşflərlə dolu olmalıydı.',
-      'story.p2': 'Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.',
-      'story.p3': 'Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.',
-      'story.p4': 'Yeganə yol qohum olmayan donordan sümük iliyi transplantasiyasıdır. Medical Park Antalya xəstəxanasında Prof. Dr. Akif Yeşilipek müalicəni qəbul edib. Ümumi xərc: 80.000 USD.',
-      'story.p5': 'Ailəsi Sabirabad rayonu, Məmişlər kəndində yaşayır. Bu məbləği ödəmək imkanları yoxdur. Anası Zinyət gecə-gündüz onun yanındadır. Atası Nuru çalışıb-çabalayır, amma bu rəqəm onların gücündən qat-qat çoxdur.',
-      'story.p6': 'İndi Orxanın ümidi sizdə — bizdədir. Hər manat onun nəfəs alma şansını artırır.',
-      'impact.title': 'Bir bağışın həqiqi gücü',
-      'impact.subtitle': 'Hər manat Orxanın müalicəsinə birbaşa təsir edir',
-      'impact.c1': 'Bir gün üçün dərman dozası',
-      'impact.c2': 'Bir tibbi müayinə',
-      'impact.c3': 'Bir həftəlik xəstəxana xərci',
-      'impact.c4': 'Transplantasiya öncəsi hazırlıq',
-      'quote.text': 'Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?',
-      'quote.name': 'Abdullazadə Zinyət',
-      'quote.role': 'Orxanın anası',
-      'quote.verified': 'Yoxlanılıb',
-      'gallery.title': 'Orxanın gözündən',
-      'transparency.title': 'Şəffaflıq',
-      'transparency.subtitle': 'Hər sənəd doğrudur və yoxlanıla bilər',
-      'transparency.d1': 'Medical Park müalicə paketi · 80.000 USD',
-      'transparency.d2': 'Histoloji müayinə №140/26 · MDS təsdiqi',
-      'transparency.d3': 'Klinik qan analizi · 14.05.2026',
-      'transparency.pdf': 'PDF formatında bütün sənəd',
-      'bank.title': 'Bağışla',
-      'bank.subtitle': 'Hər kart Orxanın anası Zinyət xanımın adınadır',
-      'bank.copy': 'Kopyala',
-      'bank.copied': 'Kopyalandı',
-      'bank.holder': 'Kart sahibi: Abdullazadə Zinyət (Anası)',
-      'footer.line': 'Orxan üçün dua, dəstək, sevgi.',
-      'footer.copy': '© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi',
-      'cta.cards': 'Kart hesabları',
-      'meta.title': 'Orxan Muradov üçün yardım | 4 yaşlı körpəni xilas edək',
-      'meta.description': '4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır. Hər manat onun həyatını uzada bilər.'
+      verified: 'Yoxlanılıb',
+      heroEyebrow: 'ORXAN MURADOV',
+      heroDateLabel: 'Son yenilənmə',
+      heroTitle: 'Hələ dünyaya yeni gəlmişdi...',
+      heroSubtitle: '4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.',
+      heroStoryLink: 'ORXANIN HEKAYƏSİNİ OXU',
+      stat1Num: '4', stat1Label: 'YAŞ',
+      stat2Num: '3', stat2Label: 'AY MÜBARİZƏ',
+      stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'TƏCİLİ LAZIM',
+      stat4Num: '1', stat4Label: 'BİR HƏYAT',
+      storyTitle: 'Orxanın Hekayəsi',
+      storyHtml1: '<p>Orxan Muradov hələ 4 yaşındadır. Onun dünyası oyuncaqlarla, gülüşlərlə, kiçik kəşflərlə dolu olmalıydı.</p><p>Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.</p><p>Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.</p>',
+      motherQuote: 'Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?',
+      storyHtml2: '<p>Yeganə yol qohum olmayan donordan sümük iliyi transplantasiyasıdır. Medical Park Antalya xəstəxanasında Prof. Dr. Akif Yeşilipek müalicəni qəbul edib. Ümumi xərc: 80.000 USD.</p><p>Ailəsi Sabirabad rayonu, Məmişlər kəndində yaşayır. Bu məbləği ödəmək imkanları yoxdur. Anası Zinyət gecə-gündüz onun yanındadır. Atası Nuru çalışıb-çabalayır, amma bu rəqəm onların gücündən qat-qat çoxdur.</p><p>İndi Orxanın ümidi sizdə — bizdədir. Hər manat onun nəfəs alma şansını artırır.</p>',
+      motherName: 'Abdullazadə Zinyət',
+      motherRole: 'Orxanın anası',
+      galleryTitle: 'Orxanın gözündən',
+      transparencyTitle: 'Şəffaflıq',
+      transparencySubtitle: 'Hər sənəd doğrudur və yoxlanıla bilər',
+      doc1Label: 'Medical Park müalicə paketi · 80.000 USD',
+      doc2Label: 'Histoloji müayinə №140/26 · MDS təsdiqi',
+      doc3Label: 'Klinik qan analizi · 14.05.2026',
+      pdfLink: 'PDF formatında bütün sənəd',
+      impactTitle: 'Bir bağışın həqiqi gücü',
+      impactSubtitle: 'Hər manat Orxanın müalicəsinə birbaşa təsir edir',
+      impactDesc1: 'Bir gün üçün dərman dozası',
+      impactDesc2: 'Bir tibbi müayinə',
+      impactDesc3: 'Bir həftəlik xəstəxana xərci',
+      impactDesc4: 'Transplantasiya öncəsi hazırlıq',
+      donationTitle: 'Bağışla',
+      donationSubtitle: 'Hər kart Orxanın anası Zinyət xanımın adınadır',
+      copyBtn: 'Kopyala',
+      copiedBtn: 'Kopyalandı',
+      cardHolder: 'Kart sahibi: Abdullazadə Zinyət (Anası)',
+      footerMessage: 'Orxan üçün dua, dəstək, sevgi.',
+      footerCopy: '© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi',
+      floatingCardBtn: 'Kart hesabları',
+      toastCopied: 'Kart nömrəsi kopyalandı',
+      toastCopyError: 'Kopyalama uğursuz oldu',
+      metaTitle: 'Orxan Muradov üçün yardım | 4 yaşlı körpəni xilas edək',
+      metaDescription: '4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır. Hər manat onun həyatını uzada bilər.'
+    },
+    tr: {
+      verified: 'Doğrulandı',
+      heroEyebrow: 'ORHAN MURADOV',
+      heroDateLabel: 'Son güncelleme',
+      heroTitle: 'Yeni dünyaya gelmişti...',
+      heroSubtitle: '4 yaşında. 3 aydır ağır bir hastalıkla yüzleşiyor. Onu bu mücadelede yalnız bırakma.',
+      heroStoryLink: 'ORHAN\'IN HİKAYESİNİ OKU',
+      stat1Num: '4', stat1Label: 'YAŞ',
+      stat2Num: '3', stat2Label: 'AY MÜCADELE',
+      stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'ACİL GEREKLİ',
+      stat4Num: '1', stat4Label: 'BİR HAYAT',
+      storyTitle: 'Orhan\'ın Hikayesi',
+      storyHtml1: '<p>Orhan Muradov henüz 4 yaşında. Dünyası oyuncaklarla, gülüşlerle, küçük keşiflerle dolu olmalıydı.</p><p>Ama 3 ay önce her şey değişti. Doktorlar tanıyı açıkladı: Miyelodisplastik Sendrom — lösemi öncesi evrede. Bu hastalık kemik iliğini içeriden tüketiyor.</p><p>Tıbbi göstergeler ağır. Hemoglobin normalin yarısından az, trombositler kritik seviyede. Bu rakamlar tıbbi terim gibi görünebilir, ama arkasında küçük bir çocuk var — yorgun ama hâlâ eğilmeyen.</p>',
+      motherQuote: 'Her gece yanında oturup nefesini dinliyorum. Allah\'tan ve sizden başka kime sığınalım?',
+      storyHtml2: '<p>Tek yol akraba olmayan bağışçıdan kemik iliği nakli. Medical Park Antalya hastanesinde Prof. Dr. Akif Yeşilipek tedaviyi kabul etti. Toplam maliyet: 80.000 USD.</p><p>Ailesi Sabirabad ilçesi, Memişler köyünde yaşıyor. Bu meblağı ödeme imkanları yok. Annesi Zinyet gece gündüz yanında. Babası Nuru var gücüyle çalışıyor, ama bu rakam onların gücünün çok üstünde.</p><p>Şimdi Orhan\'ın umudu sizde — bizde. Her manat onun nefes alma şansını artırır.</p>',
+      motherName: 'Abdullazade Zinyet',
+      motherRole: 'Orhan\'ın annesi',
+      galleryTitle: 'Orhan\'ın gözünden',
+      transparencyTitle: 'Şeffaflık',
+      transparencySubtitle: 'Her belge gerçek ve doğrulanabilir',
+      doc1Label: 'Medical Park tedavi paketi · 80.000 USD',
+      doc2Label: 'Histolojik inceleme №140/26 · MDS onayı',
+      doc3Label: 'Klinik kan tahlili · 14.05.2026',
+      pdfLink: 'PDF formatında tam belge',
+      impactTitle: 'Bir bağışın gerçek gücü',
+      impactSubtitle: 'Her manat Orhan\'ın tedavisine doğrudan etki ediyor',
+      impactDesc1: 'Bir gün için ilaç dozu',
+      impactDesc2: 'Bir tıbbi muayene',
+      impactDesc3: 'Bir haftalık hastane masrafı',
+      impactDesc4: 'Nakil öncesi hazırlık',
+      donationTitle: 'Bağış Yap',
+      donationSubtitle: 'Her kart Orhan\'ın annesi Zinyet hanımın adınadır',
+      copyBtn: 'Kopyala',
+      copiedBtn: 'Kopyalandı',
+      cardHolder: 'Kart sahibi: Abdullazade Zinyet (Annesi)',
+      footerMessage: 'Orhan için dua, destek, sevgi.',
+      footerCopy: '© 2026 Orhan Muradov için toplanan destek · WhatsApp: +994 70 395 58 54 · Sabirabad, Memişler köyü',
+      floatingCardBtn: 'Kart hesapları',
+      toastCopied: 'Kart numarası kopyalandı',
+      toastCopyError: 'Kopyalama başarısız oldu',
+      metaTitle: 'Orhan Muradov için yardım | 4 yaşındaki çocuğu kurtaralım',
+      metaDescription: '4 yaşındaki Orhan Miyelodisplastik Sendrom ile mücadele ediyor. Kemik iliği nakli için 80.000 USD gerekli. Her manat onun yaşamını uzatabilir.'
     },
     ru: {
-      'hero.eyebrow': 'ОРХАН МУРАДОВ',
-      'hero.dateLabel': 'Последнее обновление',
-      'hero.headline': 'Он только пришёл в этот мир...',
-      'hero.sub': 'Ему 4 года. Уже 3 месяца он сражается с тяжелой болезнью. Не оставляй его одного в этой борьбе.',
-      'hero.cta': 'ЧИТАТЬ ИСТОРИЮ ОРХАНА',
-      'stats.age': 'ГОДА',
-      'stats.months': 'МЕСЯЦА БОРЬБЫ',
-      'stats.needed': 'СРОЧНО НУЖНО',
-      'stats.life': 'ОДНА ЖИЗНЬ',
-      'story.title': 'История Орхана',
-      'story.p1': 'Орхану Мурадову всего 4 года. Его мир должен был быть полон игрушек, смеха и маленьких открытий.',
-      'story.p2': 'Но 3 месяца назад всё изменилось. Врачи поставили диагноз: миелодиспластический синдром — предлейкозное состояние. Эта болезнь разрушает его костный мозг изнутри.',
-      'story.p3': 'Медицинские показатели тяжёлые. Гемоглобин — меньше половины нормы, тромбоциты — на критическом уровне. За этими цифрами стоит маленький мальчик — уставший, но всё ещё несдающийся.',
-      'story.p4': 'Единственный путь — пересадка костного мозга от неродственного донора. В клинике Medical Park Antalya проф. д-р Акиф Йешилипек принял его на лечение. Общая стоимость: 80.000 USD.',
-      'story.p5': 'Семья живёт в Сабирабадском районе, в селе Мамишляр. Они не в состоянии оплатить эту сумму. Мама Зинят день и ночь рядом с ним. Отец Нуру старается изо всех сил, но эта сумма во много раз превышает их возможности.',
-      'story.p6': 'Сейчас надежда Орхана — на вас, на нас. Каждый манат увеличивает его шанс дышать дальше.',
-      'impact.title': 'Истинная сила одного пожертвования',
-      'impact.subtitle': 'Каждый манат напрямую влияет на лечение Орхана',
-      'impact.c1': 'Доза лекарств на один день',
-      'impact.c2': 'Одно медицинское обследование',
-      'impact.c3': 'Неделя в больнице',
-      'impact.c4': 'Подготовка к трансплантации',
-      'quote.text': 'Каждую ночь я сижу рядом и слушаю его дыхание. К кому ещё нам обратиться, кроме Бога и вас?',
-      'quote.name': 'Абдуллазаде Зинят',
-      'quote.role': 'Мама Орхана',
-      'quote.verified': 'Проверено',
-      'gallery.title': 'Глазами Орхана',
-      'transparency.title': 'Прозрачность',
-      'transparency.subtitle': 'Каждый документ — настоящий и проверяемый',
-      'transparency.d1': 'Лечебный пакет Medical Park · 80.000 USD',
-      'transparency.d2': 'Гистологическое исследование №140/26 · подтверждение MDS',
-      'transparency.d3': 'Клинический анализ крови · 14.05.2026',
-      'transparency.pdf': 'Полный документ в PDF',
-      'bank.title': 'Пожертвовать',
-      'bank.subtitle': 'Каждая карта оформлена на маму Орхана — Зинят ханум',
-      'bank.copy': 'Копировать',
-      'bank.copied': 'Скопировано',
-      'bank.holder': 'Владелец карты: Абдуллазаде Зинят (Мама)',
-      'footer.line': 'За Орхана: молитва, поддержка, любовь.',
-      'footer.copy': '© 2026 Сбор средств для Орхана Мурадова · WhatsApp: +994 70 395 58 54 · Сабирабад, село Мамишляр',
-      'cta.cards': 'Реквизиты карт',
-      'meta.title': 'Помощь Орхану Мурадову | Спасём 4-летнего мальчика',
-      'meta.description': '4-летний Орхан борется с миелодиспластическим синдромом. Для пересадки костного мозга нужно 80.000 USD. Каждый манат продлевает его жизнь.'
+      verified: 'Проверено',
+      heroEyebrow: 'ОРХАН МУРАДОВ',
+      heroDateLabel: 'Последнее обновление',
+      heroTitle: 'Он только пришёл в этот мир...',
+      heroSubtitle: 'Ему 4 года. Уже 3 месяца он сражается с тяжелой болезнью. Не оставляй его одного в этой борьбе.',
+      heroStoryLink: 'ЧИТАТЬ ИСТОРИЮ ОРХАНА',
+      stat1Num: '4', stat1Label: 'ГОДА',
+      stat2Num: '3', stat2Label: 'МЕСЯЦА БОРЬБЫ',
+      stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'СРОЧНО НУЖНО',
+      stat4Num: '1', stat4Label: 'ОДНА ЖИЗНЬ',
+      storyTitle: 'История Орхана',
+      storyHtml1: '<p>Орхану Мурадову всего 4 года. Его мир должен был быть полон игрушек, смеха и маленьких открытий.</p><p>Но 3 месяца назад всё изменилось. Врачи поставили диагноз: миелодиспластический синдром — предлейкозное состояние. Эта болезнь разрушает его костный мозг изнутри.</p><p>Медицинские показатели тяжёлые. Гемоглобин — меньше половины нормы, тромбоциты — на критическом уровне. За этими цифрами стоит маленький мальчик — уставший, но всё ещё несдающийся.</p>',
+      motherQuote: 'Каждую ночь я сижу рядом и слушаю его дыхание. К кому ещё нам обратиться, кроме Бога и вас?',
+      storyHtml2: '<p>Единственный путь — пересадка костного мозга от неродственного донора. В клинике Medical Park Antalya проф. д-р Акиф Йешилипек принял его на лечение. Общая стоимость: 80.000 USD.</p><p>Семья живёт в Сабирабадском районе, в селе Мамишляр. Они не в состоянии оплатить эту сумму. Мама Зинят день и ночь рядом с ним. Отец Нуру старается изо всех сил, но эта сумма во много раз превышает их возможности.</p><p>Сейчас надежда Орхана — на вас, на нас. Каждый манат увеличивает его шанс дышать дальше.</p>',
+      motherName: 'Абдуллазаде Зинят',
+      motherRole: 'Мама Орхана',
+      galleryTitle: 'Глазами Орхана',
+      transparencyTitle: 'Прозрачность',
+      transparencySubtitle: 'Каждый документ — настоящий и проверяемый',
+      doc1Label: 'Лечебный пакет Medical Park · 80.000 USD',
+      doc2Label: 'Гистологическое исследование №140/26 · подтверждение MDS',
+      doc3Label: 'Клинический анализ крови · 14.05.2026',
+      pdfLink: 'Полный документ в PDF',
+      impactTitle: 'Истинная сила одного пожертвования',
+      impactSubtitle: 'Каждый манат напрямую влияет на лечение Орхана',
+      impactDesc1: 'Доза лекарств на один день',
+      impactDesc2: 'Одно медицинское обследование',
+      impactDesc3: 'Неделя в больнице',
+      impactDesc4: 'Подготовка к трансплантации',
+      donationTitle: 'Пожертвовать',
+      donationSubtitle: 'Каждая карта оформлена на маму Орхана — Зинят ханум',
+      copyBtn: 'Копировать',
+      copiedBtn: 'Скопировано',
+      cardHolder: 'Владелец карты: Абдуллазаде Зинят (Мама)',
+      footerMessage: 'За Орхана: молитва, поддержка, любовь.',
+      footerCopy: '© 2026 Сбор средств для Орхана Мурадова · WhatsApp: +994 70 395 58 54 · Сабирабад, село Мамишляр',
+      floatingCardBtn: 'Реквизиты карт',
+      toastCopied: 'Номер карты скопирован',
+      toastCopyError: 'Не удалось скопировать',
+      metaTitle: 'Помощь Орхану Мурадову | Спасём 4-летнего мальчика',
+      metaDescription: '4-летний Орхан борется с миелодиспластическим синдромом. Для пересадки костного мозга нужно 80.000 USD. Каждый манат продлевает его жизнь.'
     },
     en: {
-      'hero.eyebrow': 'ORXAN MURADOV',
-      'hero.dateLabel': 'Last updated',
-      'hero.headline': 'He just came into this world...',
-      'hero.sub': 'He is 4 years old. He has been facing a critical illness for 3 months. Don’t let him fight alone.',
-      'hero.cta': 'READ ORXAN’S STORY',
-      'stats.age': 'YEARS',
-      'stats.months': 'MONTHS OF FIGHT',
-      'stats.needed': 'URGENTLY NEEDED',
-      'stats.life': 'ONE LIFE',
-      'story.title': 'Orxan’s Story',
-      'story.p1': 'Orxan Muradov is only 4 years old. His world should have been filled with toys, laughter, and small discoveries.',
-      'story.p2': 'But 3 months ago, everything changed. The doctors delivered the diagnosis: Myelodysplastic Syndrome — a pre-leukemic state. This disease destroys his bone marrow from within.',
-      'story.p3': 'His medical numbers are grave. Hemoglobin less than half of normal, platelets at a critical level. These figures may look like medical terms, but behind them is a small boy — exhausted, yet still unbroken.',
-      'story.p4': 'The only path forward is an unrelated-donor bone marrow transplant. At Medical Park Antalya, Prof. Dr. Akif Yeşilipek has accepted him for treatment. Total cost: 80,000 USD.',
-      'story.p5': 'His family lives in Sabirabad district, in the village of Məmişlər. They cannot afford this sum. His mother Zinyet sits by his side day and night. His father Nuru works as hard as he can, but this number is far beyond their reach.',
-      'story.p6': 'Now Orxan’s hope rests on you — on us. Every manat increases his chance to keep breathing.',
-      'impact.title': 'The true power of a single donation',
-      'impact.subtitle': 'Every manat directly impacts Orxan’s treatment',
-      'impact.c1': 'One day of medication',
-      'impact.c2': 'One medical examination',
-      'impact.c3': 'One week in hospital',
-      'impact.c4': 'Pre-transplant preparation',
-      'quote.text': 'Every night I sit beside him, listening to his breathing. Who else can we turn to, but God and you?',
-      'quote.name': 'Abdullazadə Zinyet',
-      'quote.role': 'Orxan’s mother',
-      'quote.verified': 'Verified',
-      'gallery.title': 'Through Orxan’s eyes',
-      'transparency.title': 'Transparency',
-      'transparency.subtitle': 'All documents are real and verifiable',
-      'transparency.d1': 'Medical Park treatment package · 80,000 USD',
-      'transparency.d2': 'Histology examination No. 140/26 · MDS confirmation',
-      'transparency.d3': 'Clinical blood test · 14.05.2026',
-      'transparency.pdf': 'Full document as PDF',
-      'bank.title': 'Donate',
-      'bank.subtitle': 'All cards are registered under Orxan’s mother, Zinyet',
-      'bank.copy': 'Copy',
-      'bank.copied': 'Copied',
-      'bank.holder': 'Cardholder: Abdullazadə Zinyet (Mother)',
-      'footer.line': 'For Orxan: prayer, support, love.',
-      'footer.copy': '© 2026 Support raised for Orxan Muradov · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər village',
-      'cta.cards': 'Bank cards',
-      'meta.title': 'Help Orxan Muradov | Save a 4-year-old boy',
-      'meta.description': 'Four-year-old Orxan is fighting Myelodysplastic Syndrome. A bone marrow transplant requires 80,000 USD. Every manat can extend his life.'
+      verified: 'Verified',
+      heroEyebrow: 'ORXAN MURADOV',
+      heroDateLabel: 'Last updated',
+      heroTitle: 'He just came into this world...',
+      heroSubtitle: 'He is 4 years old. He has been facing a critical illness for 3 months. Don’t let him fight alone.',
+      heroStoryLink: 'READ ORXAN’S STORY',
+      stat1Num: '4', stat1Label: 'YEARS',
+      stat2Num: '3', stat2Label: 'MONTHS OF FIGHT',
+      stat3Num: '80,000<span class="u-stat-unit">$</span>', stat3Label: 'URGENTLY NEEDED',
+      stat4Num: '1', stat4Label: 'ONE LIFE',
+      storyTitle: 'Orxan’s Story',
+      storyHtml1: '<p>Orxan Muradov is only 4 years old. His world should have been filled with toys, laughter, and small discoveries.</p><p>But 3 months ago, everything changed. The doctors delivered the diagnosis: Myelodysplastic Syndrome — a pre-leukemic state. This disease is destroying his bone marrow from within.</p><p>His medical numbers are grave. Hemoglobin less than half of normal, platelets at a critical level. These figures may look like medical terms, but behind them is a small boy — exhausted, yet still unbroken.</p>',
+      motherQuote: 'Every night I sit beside him, listening to his breathing. Who else can we turn to, but God and you?',
+      storyHtml2: '<p>The only path forward is an unrelated-donor bone marrow transplant. At Medical Park Antalya, Prof. Dr. Akif Yeşilipek has accepted him for treatment. Total cost: 80,000 USD.</p><p>His family lives in Sabirabad district, in the village of Məmişlər. They cannot afford this sum. His mother Zinyet sits by his side day and night. His father Nuru works as hard as he can, but this number is far beyond their reach.</p><p>Now Orxan’s hope rests on you — on us. Every manat increases his chance to keep breathing.</p>',
+      motherName: 'Abdullazadə Zinyet',
+      motherRole: 'Orxan’s mother',
+      galleryTitle: 'Through Orxan’s eyes',
+      transparencyTitle: 'Transparency',
+      transparencySubtitle: 'All documents are real and verifiable',
+      doc1Label: 'Medical Park treatment package · 80,000 USD',
+      doc2Label: 'Histology examination No. 140/26 · MDS confirmation',
+      doc3Label: 'Clinical blood test · 14.05.2026',
+      pdfLink: 'Full document as PDF',
+      impactTitle: 'The true power of a single donation',
+      impactSubtitle: 'Every manat directly impacts Orxan’s treatment',
+      impactDesc1: 'One day of medication',
+      impactDesc2: 'One medical examination',
+      impactDesc3: 'One week in hospital',
+      impactDesc4: 'Pre-transplant preparation',
+      donationTitle: 'Donate',
+      donationSubtitle: 'All cards are registered under Orxan’s mother, Zinyet',
+      copyBtn: 'Copy',
+      copiedBtn: 'Copied',
+      cardHolder: 'Cardholder: Abdullazadə Zinyet (Mother)',
+      footerMessage: 'For Orxan: prayer, support, love.',
+      footerCopy: '© 2026 Support raised for Orxan Muradov · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər village',
+      floatingCardBtn: 'Bank cards',
+      toastCopied: 'Card number copied',
+      toastCopyError: 'Copy failed',
+      metaTitle: 'Help Orxan Muradov | Save a 4-year-old boy',
+      metaDescription: 'Four-year-old Orxan is fighting Myelodysplastic Syndrome. A bone marrow transplant requires 80,000 USD. Every manat can extend his life.'
     }
   };
 
-  const MONTHS = {
+  const MONTH_NAMES = {
     az: ['Yanvar','Fevral','Mart','Aprel','May','İyun','İyul','Avqust','Sentyabr','Oktyabr','Noyabr','Dekabr'],
+    tr: ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'],
     ru: ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'],
     en: ['January','February','March','April','May','June','July','August','September','October','November','December']
   };
@@ -1167,117 +1412,360 @@ h1, h2, h3, h4 {
   function formatLocalizedDate(isoDate, lang) {
     const [y, m, d] = isoDate.split('-').map(Number);
     const day = d;
-    const month = MONTHS[lang][m - 1];
+    const month = MONTH_NAMES[lang][m - 1];
     if (lang === 'en') return month + ' ' + day + ', ' + y;
     return day + ' ' + month + ' ' + y;
   }
 
   let currentLang = 'az';
 
-  function renderLang(lang) {
+  function setLanguage(lang) {
+    if (!translations[lang]) lang = 'az';
     currentLang = lang;
     document.documentElement.lang = lang;
+    const t = translations[lang];
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const text = translations[lang][key];
-      if (text !== undefined) el.textContent = text;
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key] !== undefined) el.innerHTML = t[key];
     });
 
     const dateEl = document.getElementById('dateValue');
     if (dateEl) dateEl.textContent = formatLocalizedDate(HARDCODED_DATE, lang);
 
-    const titleText = translations[lang]['meta.title'];
-    const descText = translations[lang]['meta.description'];
-    if (titleText) document.title = titleText;
+    if (t.metaTitle) document.title = t.metaTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && descText) metaDesc.setAttribute('content', descText);
+    if (metaDesc && t.metaDescription) metaDesc.setAttribute('content', t.metaDescription);
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
+    syncStats();
+
     try { localStorage.setItem('orxan_lang', lang); } catch (e) {}
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    let saved = 'az';
-    try { saved = localStorage.getItem('orxan_lang') || 'az'; } catch (e) {}
-    if (!translations[saved]) saved = 'az';
-    renderLang(saved);
+  // ═══════════ STAT COUNT-UP ═══════════
+  let statsAnimated = false;
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => renderLang(btn.getAttribute('data-lang')));
+  function formatStatNumber(value, lang) {
+    if (value < 1000) return value.toString();
+    try {
+      const locale = lang === 'az' ? 'de-DE' : lang === 'tr' ? 'tr-TR' : lang === 'ru' ? 'ru-RU' : 'en-US';
+      return new Intl.NumberFormat(locale).format(value);
+    } catch (e) {
+      return value.toString();
+    }
+  }
+
+  function applyStatValue(el, value) {
+    const unitSpan = el.querySelector('.u-stat-unit');
+    const formatted = formatStatNumber(value, currentLang);
+    if (!unitSpan) {
+      el.textContent = formatted;
+    } else {
+      const unitHTML = unitSpan.outerHTML;
+      el.innerHTML = formatted + unitHTML;
+    }
+  }
+
+  function syncStats() {
+    document.querySelectorAll('.u-stat-num').forEach((el, i) => {
+      const target = STAT_TARGETS[i];
+      if (target === undefined) return;
+      applyStatValue(el, statsAnimated ? target : 0);
     });
+  }
 
-    // ===== Copy buttons =====
+  function animateStats() {
+    if (statsAnimated) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      statsAnimated = true;
+      syncStats();
+      return;
+    }
+    statsAnimated = true;
+    const duration = 1800;
+    const startTime = performance.now();
+    const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+    const stats = document.querySelectorAll('.u-stat-num');
+    function tick(now) {
+      const elapsed = now - startTime;
+      const t = Math.min(elapsed / duration, 1);
+      const eased = easeOutQuart(t);
+      stats.forEach((el, i) => {
+        const target = STAT_TARGETS[i];
+        if (target === undefined) return;
+        applyStatValue(el, Math.round(target * eased));
+      });
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function setupStatsObserver() {
+    const target = document.querySelector('.unified-stats');
+    if (!target) return;
+    if (!('IntersectionObserver' in window)) {
+      statsAnimated = true;
+      syncStats();
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateStats();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    observer.observe(target);
+  }
+
+  // ═══════════ TOAST ═══════════
+  let toastTimer = null;
+  function showToast(message, isError) {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.toggle('error', !!isError);
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+  }
+
+  // ═══════════ COPY BUTTON + META PIXEL ═══════════
+  function setupCopyButtons() {
     document.querySelectorAll('.copy-btn-full').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const num = btn.getAttribute('data-copy');
-        const fallback = () => {
-          const ta = document.createElement('textarea');
-          ta.value = num;
-          ta.style.position = 'fixed';
-          ta.style.opacity = '0';
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand('copy'); } catch (e) {}
-          document.body.removeChild(ta);
+      btn.addEventListener('click', async () => {
+        const cardNum = btn.dataset.card;
+        const t = translations[currentLang];
+        const iconEl = btn.querySelector('i');
+        const labelEl = btn.querySelector('.copy-btn-label');
+        const prevIconClass = iconEl ? iconEl.className : '';
+
+        const fallbackCopy = () => {
+          try {
+            const ta = document.createElement('textarea');
+            ta.value = cardNum;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            return true;
+          } catch (e) { return false; }
         };
-        const success = () => {
+
+        let success = false;
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(cardNum);
+            success = true;
+          } else {
+            success = fallbackCopy();
+          }
+        } catch (e) {
+          success = fallbackCopy();
+        }
+
+        if (success) {
           btn.classList.add('copied');
-          const icon = btn.querySelector('i');
-          const label = btn.querySelector('span');
-          const prevIcon = icon ? icon.className : '';
-          if (icon) icon.className = 'ti ti-check';
-          if (label) label.textContent = translations[currentLang]['bank.copied'];
+          if (iconEl) iconEl.className = 'ti ti-check';
+          if (labelEl) labelEl.textContent = t.copiedBtn;
+          showToast(t.toastCopied);
+
+          if (typeof fbq !== 'undefined') {
+            try {
+              fbq('track', 'AddToCart', {
+                content_name: 'Bank Card Copy',
+                content_category: 'Donation',
+                content_ids: [cardNum.substring(0, 4)],
+                value: 0,
+                currency: 'USD'
+              });
+            } catch (e) {}
+          }
+
           setTimeout(() => {
             btn.classList.remove('copied');
-            if (icon) icon.className = prevIcon;
-            if (label) label.textContent = translations[currentLang]['bank.copy'];
+            if (iconEl) iconEl.className = prevIconClass;
+            if (labelEl) labelEl.textContent = t.copyBtn;
           }, 2000);
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(num).then(success).catch(() => { fallback(); success(); });
         } else {
-          fallback();
-          success();
+          showToast(t.toastCopyError, true);
+        }
+      });
+    });
+  }
+
+  // ═══════════ LIGHTBOX ═══════════
+  let lightboxImages = [];
+  let lightboxIndex = 0;
+  let lightboxHistoryPushed = false;
+
+  function openLightbox(images, index) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    if (!lightbox || !lightboxImg) return;
+    lightboxImages = images;
+    lightboxIndex = index;
+    lightboxImg.src = images[index];
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    try {
+      history.pushState({ orxanLightbox: true }, '');
+      lightboxHistoryPushed = true;
+    } catch (e) {}
+    updateLightboxNav();
+  }
+
+  function closeLightbox(fromPopstate) {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    if (lightboxHistoryPushed && !fromPopstate) {
+      try { history.back(); } catch (e) {}
+    }
+    lightboxHistoryPushed = false;
+  }
+
+  function navLightbox(dir) {
+    if (lightboxImages.length === 0) return;
+    lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+    const lightboxImg = document.getElementById('lightboxImg');
+    if (lightboxImg) lightboxImg.src = lightboxImages[lightboxIndex];
+    updateLightboxNav();
+  }
+
+  function updateLightboxNav() {
+    const prev = document.getElementById('lightboxPrev');
+    const next = document.getElementById('lightboxNext');
+    const single = lightboxImages.length <= 1;
+    if (prev) prev.style.display = single ? 'none' : '';
+    if (next) next.style.display = single ? 'none' : '';
+  }
+
+  function setupLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    const galleryEls = Array.from(document.querySelectorAll('.gallery-item'));
+    const galleryImages = galleryEls.map(el => el.dataset.img).filter(Boolean);
+    galleryEls.forEach((el, i) => {
+      el.addEventListener('click', () => openLightbox(galleryImages, i));
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(galleryImages, i);
         }
       });
     });
 
-    // ===== Lightbox =====
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    function openLightbox(src, alt) {
-      lightboxImg.src = src;
-      lightboxImg.alt = alt || '';
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    }
-
-    document.querySelectorAll('[data-lightbox]').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    const docEls = Array.from(document.querySelectorAll('.doc-card'));
+    const docImages = docEls.map(el => el.dataset.img).filter(Boolean);
+    docEls.forEach((el, i) => {
+      el.addEventListener('click', (e) => {
+        // Don't open lightbox if clicking the PDF link inside the doc card
+        if (e.target.closest('a')) return;
+        openLightbox(docImages, i);
+      });
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          if (e.target.closest('a')) return;
+          e.preventDefault();
+          openLightbox(docImages, i);
+        }
+      });
     });
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
+
+    document.getElementById('lightboxClose').addEventListener('click', () => closeLightbox());
+    document.getElementById('lightboxPrev').addEventListener('click', (e) => { e.stopPropagation(); navLightbox(-1); });
+    document.getElementById('lightboxNext').addEventListener('click', (e) => { e.stopPropagation(); navLightbox(1); });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
     });
 
-    // ===== Fail-safe reveal =====
-    const animatedEls = document.querySelectorAll('[data-animate]');
+    window.addEventListener('popstate', () => {
+      if (lightbox.classList.contains('active')) closeLightbox(true);
+    });
 
-    // Layer 2: IntersectionObserver feature detection
+    // Right-swipe to close
+    let lbTouchStartX = null;
+    let lbTouchStartY = null;
+    lightbox.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      lbTouchStartX = e.touches[0].clientX;
+      lbTouchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => {
+      if (lbTouchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - lbTouchStartX;
+      const dy = e.changedTouches[0].clientY - lbTouchStartY;
+      if (dx > 80 && Math.abs(dy) < 60) {
+        closeLightbox();
+      } else if (dx < -80 && Math.abs(dy) < 60) {
+        navLightbox(1);
+      } else if (dx > 0 && false) {} // (no-op placeholder)
+      lbTouchStartX = null;
+      lbTouchStartY = null;
+    }, { passive: true });
+  }
+
+  // ═══════════ SCROLL PROGRESS BAR ═══════════
+  (function scrollProgress() {
+    const fill = document.getElementById('scrollProgressFill');
+    if (!fill) return;
+    let ticking = false;
+    function update() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      fill.style.width = pct + '%';
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+
+  // ═══════════ DOMContentLoaded ═══════════
+  document.addEventListener('DOMContentLoaded', function () {
+    let saved = 'az';
+    try { saved = localStorage.getItem('orxan_lang') || 'az'; } catch (e) {}
+    if (!translations[saved]) saved = 'az';
+    setLanguage(saved);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+    });
+
+    setupCopyButtons();
+    setupLightbox();
+    setupStatsObserver();
+
+    // Initialize stats at 0
+    syncStats();
+
+    // ═══════════ Fail-safe reveal: 4 layers ═══════════
+    const animatedEls = document.querySelectorAll('[data-animate]');
     const supportsIO = ('IntersectionObserver' in window);
     if (!supportsIO) {
       animatedEls.forEach(el => el.classList.add('in-view'));
@@ -1293,12 +1781,10 @@ h1, h2, h3, h4 {
       animatedEls.forEach(el => io.observe(el));
     }
 
-    // Layer 3: 2-second timeout safety net
     setTimeout(() => {
       document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el => el.classList.add('in-view'));
-    }, 2000);
+    }, 1200);
 
-    // Layer 4: First-scroll catch-all
     let revealedOnScroll = false;
     window.addEventListener('scroll', () => {
       if (revealedOnScroll) return;
