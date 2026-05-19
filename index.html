@@ -348,32 +348,58 @@ h1, h2, h3, h4 {
 }
 .hero-story-link:hover { color: white; }
 .hero-story-text {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(255,255,255,0.92);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
 }
-.chevron-stack {
+.scroll-combo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 0.6;
+  gap: 8px;
 }
-.chevron-stack i {
-  font-size: 22px;
-  animation: chevron-bounce 2s ease-in-out infinite;
+.combo-chevron {
+  display: block;
+  color: rgba(255,255,255,0.75);
+  animation: combo-chevron 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
 }
-.chevron-stack i:nth-child(2) {
-  animation-delay: 0.2s;
-  opacity: 0.4;
-  margin-top: -8px;
-}
-@keyframes chevron-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.5; }
+@keyframes combo-chevron {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
   50%      { transform: translateY(4px); opacity: 1; }
 }
+.combo-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: combo-pulse 1.6s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(232,155,138,0.55);
+}
+@keyframes combo-pulse {
+  0%, 70%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(232,155,138,0.55);
+  }
+  14% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 5px rgba(232,155,138,0);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 3px rgba(232,155,138,0);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
-  .chevron-stack i { animation: none; opacity: 0.7; }
+  .combo-chevron, .combo-dot { animation: none; }
 }
 
 @media (max-width: 768px) {
@@ -395,7 +421,7 @@ h1, h2, h3, h4 {
   }
   .hero-date-badge i { font-size: 12px; }
   .hero-story-link { margin-top: 2.25rem; gap: 0.75rem; }
-  .hero-story-text { font-size: 0.75rem; }
+  .hero-story-text { font-size: 1.125rem; }
 }
 
 /* ─── STORY (with stats inside) ─── */
@@ -995,10 +1021,12 @@ h1, h2, h3, h4 {
     <h1 data-i18n-html="heroTitle">Hələ dünyaya yeni gəlmişdi...</h1>
     <p class="hero-sub" data-i18n="heroSubtitle">4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.</p>
     <a href="#story" class="hero-story-link">
-      <span class="hero-story-text" data-i18n="heroStoryLink">ORXANIN HEKAYƏSİNİ OXU</span>
-      <span class="chevron-stack" aria-hidden="true">
-        <i class="ti ti-chevron-down"></i>
-        <i class="ti ti-chevron-down"></i>
+      <span class="hero-story-text" data-i18n="heroStoryLink">Orxanın hekayəsi</span>
+      <span class="scroll-combo" aria-hidden="true">
+        <svg class="combo-chevron" width="22" height="12" viewBox="0 0 22 12" fill="none">
+          <path d="M2 2 L11 10 L20 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="combo-dot"></span>
       </span>
     </a>
   </div>
@@ -1238,7 +1266,7 @@ h1, h2, h3, h4 {
       heroDateLabel: 'Son yenilənmə',
       heroTitle: 'Hələ dünyaya yeni gəlmişdi...',
       heroSubtitle: '4 yaşı var. 3 aydır kəskin xəstəliklə üzbəüzdür. Onun bu döyüşdə tək qalmasına imkan vermə.',
-      heroStoryLink: 'ORXANIN HEKAYƏSİNİ OXU',
+      heroStoryLink: 'Orxanın hekayəsi',
       stat1Num: '4', stat1Label: 'YAŞ',
       stat2Num: '3', stat2Label: 'AY MÜBARİZƏ',
       stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'TƏCİLİ LAZIM',
@@ -1281,7 +1309,7 @@ h1, h2, h3, h4 {
       heroDateLabel: 'Son güncelleme',
       heroTitle: 'Yeni dünyaya gelmişti...',
       heroSubtitle: '4 yaşında. 3 aydır ağır bir hastalıkla yüzleşiyor. Onu bu mücadelede yalnız bırakma.',
-      heroStoryLink: 'ORHAN\'IN HİKAYESİNİ OKU',
+      heroStoryLink: 'Orhan\'ın hikayesi',
       stat1Num: '4', stat1Label: 'YAŞ',
       stat2Num: '3', stat2Label: 'AY MÜCADELE',
       stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'ACİL GEREKLİ',
@@ -1324,7 +1352,7 @@ h1, h2, h3, h4 {
       heroDateLabel: 'Последнее обновление',
       heroTitle: 'Он только пришёл в этот мир...',
       heroSubtitle: 'Ему 4 года. Уже 3 месяца он сражается с тяжелой болезнью. Не оставляй его одного в этой борьбе.',
-      heroStoryLink: 'ЧИТАТЬ ИСТОРИЮ ОРХАНА',
+      heroStoryLink: 'История Орхана',
       stat1Num: '4', stat1Label: 'ГОДА',
       stat2Num: '3', stat2Label: 'МЕСЯЦА БОРЬБЫ',
       stat3Num: '80.000<span class="u-stat-unit">$</span>', stat3Label: 'СРОЧНО НУЖНО',
@@ -1367,7 +1395,7 @@ h1, h2, h3, h4 {
       heroDateLabel: 'Last updated',
       heroTitle: 'He just came into this world...',
       heroSubtitle: 'He is 4 years old. He has been facing a critical illness for 3 months. Don’t let him fight alone.',
-      heroStoryLink: 'READ ORXAN’S STORY',
+      heroStoryLink: 'Orxan’s story',
       stat1Num: '4', stat1Label: 'YEARS',
       stat2Num: '3', stat2Label: 'MONTHS OF FIGHT',
       stat3Num: '80,000<span class="u-stat-unit">$</span>', stat3Label: 'URGENTLY NEEDED',
