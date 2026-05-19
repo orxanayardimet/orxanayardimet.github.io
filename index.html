@@ -631,12 +631,16 @@ h1, h2, h3, h4 {
 }
 .doc-thumb {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 340px;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 0.875rem;
   filter: contrast(1.02) saturate(0.92);
   background: var(--bg-warm);
+  padding: 8px;
+}
+@media (max-width: 800px) {
+  .doc-thumb { height: 420px; }
 }
 .doc-label {
   font-size: 0.875rem;
