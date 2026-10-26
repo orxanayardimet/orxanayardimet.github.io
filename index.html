@@ -4,7 +4,7 @@
 <script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#2B2420">
+<meta name="theme-color" content="#FBF7F0">
 <title>Orxan Muradov üçün yardım | 4 yaşlı körpəni xilas edək</title>
 <meta name="description" content="4 yaşlı Orxan Mielodisplastik Sindromla mübarizə aparır. Sümük iliyi transplantasiyası üçün 80.000 USD lazımdır. Hər manat onun həyatını uzada bilər.">
 <meta name="keywords" content="Orxan Muradov, Mielodisplastik Sindrom, MDS, sümük iliyi, transplantasiya, yardım, Medical Park, Antalya, Sabirabad">
@@ -211,41 +211,16 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* ─── HERO with vignette ─── */
+/* ─── HERO ─── */
 .hero {
   position: relative;
-  min-height: 92vh;
-  padding: 6rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 3rem;
   overflow: hidden;
-  color: white;
-  background: var(--bg-dark);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-}
-/* Ambient light: the portrait itself, blurred into a soft glow behind everything */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: -10%;
-  background-image: url('images/orxan-hero.jpg');
-  background-size: cover;
-  background-position: center 30%;
-  filter: blur(70px) saturate(1.2);
-  opacity: 0.45;
-  transform: scale(1.15);
-  z-index: 0;
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 45% at 50% 68%, rgba(232,155,138,0.18) 0%, transparent 70%),
-    linear-gradient(180deg, rgba(43,36,32,0.82) 0%, rgba(43,36,32,0.7) 45%, rgba(43,36,32,0.95) 100%);
-  z-index: 1;
-  pointer-events: none;
 }
 
 .hero > * { position: relative; z-index: 2; }
@@ -264,22 +239,21 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--accent-text);
   margin: 0 0 1rem;
 }
 
 .hero h1 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
   font-size: 2.5rem;
   line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: white;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
   margin: 0;
 }
 .hero h1 em {
-  color: var(--accent-soft);
+  color: var(--accent-text);
   font-style: italic;
   text-decoration: none;
   font-family: inherit;
@@ -287,58 +261,15 @@ h1, h2, h3, h4 {
 }
 
 .hero-sub {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text-body);
   max-width: 660px;
-  margin: 1.75rem auto 0;
+  margin: 1.25rem auto 0;
 }
-
-/* Trust pill — top-right of hero */
-.photo-trust-pill {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2;
-  background: rgba(255,255,255,0.95);
-  color: var(--accent-text);
-  font-size: 0.75rem;
-  padding: 6px 14px;
-  border-radius: 100px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(43,36,32,0.15);
-}
-.photo-trust-pill i { font-size: 14px; color: var(--accent); }
-
-/* Date badge — below trust pill, top-right */
-.hero-date-badge {
-  position: absolute;
-  top: calc(20px + 36px + 14px);
-  right: 20px;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 0.5px solid rgba(255,255,255,0.2);
-  border-radius: 100px;
-  padding: 6px 14px;
-  color: rgba(255,255,255,0.95);
-  font-size: 0.8125rem;
-}
-.hero-date-badge i { font-size: 14px; color: var(--accent); }
-.hero-date-label { font-weight: 400; opacity: 0.85; }
-.hero-date-value { font-weight: 500; }
 
 /* Hero story link with animated chevrons */
 .hero-story-link {
@@ -346,20 +277,18 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 3rem;
-  color: rgba(255,255,255,0.85);
+  margin-top: 2.25rem;
+  color: var(--text-muted);
   transition: color 0.2s ease;
 }
-.hero-story-link:hover { color: white; }
+.hero-story-link:hover { color: var(--text-primary); }
 .hero-story-text {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.375rem;
-  letter-spacing: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
   text-transform: none;
-  color: rgba(255,255,255,0.92);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  color: var(--text-primary);
 }
 .scroll-combo {
   display: flex;
@@ -369,9 +298,8 @@ h1, h2, h3, h4 {
 }
 .combo-chevron {
   display: block;
-  color: rgba(255,255,255,0.75);
+  color: var(--text-muted);
   animation: combo-chevron 2.4s ease-in-out infinite;
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
 }
 @keyframes combo-chevron {
   0%, 100% { transform: translateY(0); opacity: 0.55; }
@@ -408,24 +336,12 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
   :root { --section-fade: 56px; }
-  .hero { min-height: 88vh; padding: 5rem 1rem 3rem; }
-  .hero h1 { font-size: 1.75rem; }
-  .hero-sub { font-size: 1.2rem; margin-top: 1.25rem; }
+  .hero { padding: 2rem 1rem 2.5rem; }
+  .hero h1 { font-size: 1.875rem; }
+  .hero-sub { font-size: 1.0625rem; margin-top: 1rem; }
   .hero-eyebrow { font-size: 0.65rem; }
-  .photo-trust-pill {
-    top: 16px; right: 16px;
-    font-size: 0.7rem; padding: 5px 11px;
-  }
-  .photo-trust-pill i { font-size: 12px; }
-  .hero-date-badge {
-    top: calc(16px + 32px + 12px);
-    right: 16px;
-    font-size: 0.75rem;
-    padding: 6px 12px;
-  }
-  .hero-date-badge i { font-size: 12px; }
-  .hero-story-link { margin-top: 2.25rem; gap: 0.75rem; }
-  .hero-story-text { font-size: 1.125rem; }
+  .hero-story-link { margin-top: 1.75rem; gap: 0.75rem; }
+  .hero-story-text { font-size: 1rem; }
 }
 
 /* ─── PORTRAIT — tilted photo card with floating caption ─── */
@@ -529,61 +445,6 @@ h1, h2, h3, h4 {
   margin: 0.75rem auto 2rem;
 }
 
-/* Unified stats inside story */
-.unified-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin: 0.5rem 0 3rem;
-}
-.u-stat {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAF4ED 100%);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1.25rem 1rem;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-.u-stat:not(.highlight):hover { transform: translateY(-1px); }
-.u-stat:hover { border-color: var(--border-accent); }
-.u-stat.highlight {
-  background: linear-gradient(180deg, #FFF6F1 0%, var(--accent-bg) 100%);
-  border-color: var(--border-accent);
-}
-.u-stat-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-  font-feature-settings: 'tnum';
-}
-.u-stat.highlight .u-stat-num { color: var(--accent-text); }
-.u-stat-unit {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-left: 4px;
-  font-weight: 500;
-}
-.u-stat.highlight .u-stat-unit { color: var(--accent-text); opacity: 0.85; }
-.u-stat-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-}
-@media (max-width: 640px) {
-  .unified-stats { grid-template-columns: repeat(2, 1fr); }
-  .u-stat-num { font-size: 1.625rem; }
-}
-
 /* Story body */
 .story-body p {
   font-family: 'Inter', sans-serif;
@@ -682,120 +543,189 @@ h1, h2, h3, h4 {
 .transparency {
   background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-warm) var(--section-fade), var(--bg-warm) 100%);
 }
-.donation-impact {
-  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-primary) var(--section-fade), var(--bg-primary) 100%);
-}
 .donation {
-  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--accent-bg) var(--section-fade), var(--accent-bg) 100%);
+  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--accent-bg) var(--section-fade), var(--accent-bg) 100%);
 }
 
-/* ─── Gallery ─── */
+/* ─── Gallery (bento) ─── */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-auto-rows: 260px;
+  gap: 14px;
 }
 .gallery-item {
-  aspect-ratio: 4/5;
+  position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: zoom-in;
   background: var(--bg-warm);
+  box-shadow: 0 1px 2px rgba(43,36,32,0.06), 0 8px 24px rgba(43,36,32,0.08);
+  isolation: isolate;
 }
+.gallery-item.g-feature { grid-column: 1; grid-row: 1 / span 2; }
+.gallery-item.g-wide { grid-column: 2 / span 2; }
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: contrast(1.02) saturate(0.92) brightness(1.02);
-  transition: transform 0.4s ease;
+  object-position: var(--focus, center 30%);
+  filter: contrast(1.02) saturate(0.95) brightness(1.02);
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(43,36,32,0.35) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.gallery-zoom,
+.doc-zoom {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.92);
+  color: var(--text-primary);
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(43,36,32,0.15);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 .gallery-item:hover img,
-.gallery-item:focus-visible img { transform: scale(1.03); }
-@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+.gallery-item:focus-visible img { transform: scale(1.05); }
+.gallery-item:hover::after,
+.gallery-item:focus-visible::after { opacity: 1; }
+.gallery-item:hover .gallery-zoom,
+.gallery-item:focus-visible .gallery-zoom,
+.doc-card:hover .doc-zoom,
+.doc-card:focus-visible .doc-zoom { opacity: 1; transform: none; }
+.gallery-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (hover: none) {
+  .gallery-zoom, .doc-zoom { opacity: 1; transform: none; width: 32px; height: 32px; font-size: 16px; }
+}
+@media (max-width: 720px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; gap: 10px; }
+  .gallery-item { border-radius: 16px; }
+  .gallery-item.g-feature { grid-column: 1 / span 2; grid-row: span 2; }
+  .gallery-item.g-wide { grid-column: 1 / span 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item img, .gallery-zoom, .doc-zoom, .gallery-item::after { transition: none; }
+}
 
-/* ─── Transparency ─── */
+/* ─── Transparency (document cards) ─── */
 .transparency-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 20px;
 }
 .doc-card {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 10px;
   cursor: zoom-in;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 1px 2px rgba(43,36,32,0.05), 0 10px 30px rgba(43,36,32,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .doc-card:hover,
 .doc-card:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--border-accent);
+  box-shadow: 0 2px 4px rgba(43,36,32,0.05), 0 16px 40px rgba(43,36,32,0.1);
+}
+.doc-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.doc-preview {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--bg-warm);
+  isolation: isolate;
 }
 .doc-thumb {
   width: 100%;
-  height: 340px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 0.875rem;
-  filter: contrast(1.02) saturate(0.92);
-  background: var(--bg-warm);
-  padding: 8px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-@media (max-width: 800px) {
-  .doc-thumb { height: 420px; }
+.doc-preview::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 100%);
+  pointer-events: none;
+}
+.doc-card:hover .doc-thumb,
+.doc-card:focus-visible .doc-thumb { transform: scale(1.04); }
+.doc-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 6px 6px;
+}
+.doc-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--teal-bg);
+  color: var(--teal);
+  font-size: 18px;
 }
 .doc-label {
-  font-size: 0.875rem;
-  color: var(--text-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 .doc-pdf-link {
-  display: inline-block;
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
   font-size: 0.8125rem;
-  color: var(--accent-text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.doc-pdf-link:hover { color: var(--accent-hover); }
-@media (max-width: 800px) { .transparency-grid { grid-template-columns: 1fr; } }
-
-/* ─── Donation impact ─── */
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.impact-card {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.impact-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-accent);
-  box-shadow: 0 8px 24px rgba(232,155,138,0.12);
-}
-.impact-amount {
-  font-family: 'Fraunces', Georgia, serif;
   font-weight: 500;
-  font-size: 1.75rem;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
+  color: var(--accent-text);
 }
-.impact-desc {
-  font-size: 0.875rem;
-  color: var(--text-body);
-  line-height: 1.5;
+.doc-pdf-link i { font-size: 16px; }
+.doc-pdf-link:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 800px) {
+  .transparency-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 0 -1rem;
+    padding: 4px 1rem 20px;
+    scroll-padding: 0 1rem;
+    scrollbar-width: none;
+  }
+  .transparency-grid::-webkit-scrollbar { display: none; }
+  .doc-card { flex: 0 0 80%; scroll-snap-align: start; }
+  .doc-card:hover, .doc-card:focus-visible { transform: none; }
 }
-@media (max-width: 900px) { .impact-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .impact-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .doc-card, .doc-thumb { transition: none; }
+}
+
 
 /* ─── Bank cards ─── */
 .bank-grid {
@@ -1085,15 +1015,6 @@ h1, h2, h3, h4 {
 
 <!-- HERO with vignette + verified pill + date badge -->
 <section class="hero">
-  <div class="photo-trust-pill">
-    <i class="ti ti-shield-check" aria-hidden="true"></i>
-    <span data-i18n="verified">Doğrulanıb</span>
-  </div>
-  <div class="hero-date-badge">
-    <i class="ti ti-calendar" aria-hidden="true"></i>
-    <span class="hero-date-label" data-i18n="heroDateLabel">Son yenilənmə</span>
-    <span class="hero-date-value" id="dateValue">18 May 2026</span>
-  </div>
   <div class="hero-inner">
     <div class="hero-eyebrow" data-i18n="heroEyebrow">ORXAN MURADOV</div>
     <h1 data-i18n-html="heroTitle">Hələ dünyaya yeni gəlmişdi...</h1>
@@ -1128,26 +1049,6 @@ h1, h2, h3, h4 {
   <div class="story-inner">
     <h2 class="section-heading" data-i18n="storyTitle" data-animate>Orxanın Hekayəsi</h2>
     <div class="accent-line"></div>
-
-    <!-- Unified stats inside story -->
-    <div class="unified-stats" role="region" aria-label="Statistika" data-animate>
-      <div class="u-stat">
-        <span class="u-stat-num" data-i18n-html="stat1Num">4</span>
-        <span class="u-stat-label" data-i18n="stat1Label">YAŞ</span>
-      </div>
-      <div class="u-stat">
-        <span class="u-stat-num" data-i18n-html="stat2Num">3</span>
-        <span class="u-stat-label" data-i18n="stat2Label">AY MÜBARİZƏ</span>
-      </div>
-      <div class="u-stat highlight">
-        <span class="u-stat-num" data-i18n-html="stat3Num">80.000<span class="u-stat-unit">$</span></span>
-        <span class="u-stat-label" data-i18n="stat3Label">TƏCİLİ LAZIM</span>
-      </div>
-      <div class="u-stat">
-        <span class="u-stat-num" data-i18n-html="stat4Num">1</span>
-        <span class="u-stat-label" data-i18n="stat4Label">BİR HƏYAT</span>
-      </div>
-    </div>
 
     <!-- Story body part 1 -->
     <div class="story-body" data-animate>
@@ -1189,17 +1090,21 @@ h1, h2, h3, h4 {
   <h2 class="section-heading" data-i18n="galleryTitle" data-animate>Orxanın gözündən</h2>
   <div class="accent-line"></div>
   <div class="gallery-grid">
-    <div class="gallery-item" data-img="images/orxan-1.jpg" data-animate style="transition-delay:0ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
-      <img src="images/orxan-1.jpg" alt="Orxan">
+    <div class="gallery-item g-feature" data-img="images/orxan-4.jpg" data-animate style="transition-delay:0ms; --focus: center 22%" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-4.jpg" alt="Orxan" loading="lazy">
+      <span class="gallery-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
     </div>
-    <div class="gallery-item" data-img="images/orxan-2.jpg" data-animate style="transition-delay:100ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
-      <img src="images/orxan-2.jpg" alt="Orxan">
+    <div class="gallery-item g-wide" data-img="images/orxan-2.jpg" data-animate style="transition-delay:100ms; --focus: center 35%" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-2.jpg" alt="Orxan" loading="lazy">
+      <span class="gallery-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
     </div>
-    <div class="gallery-item" data-img="images/orxan-3.jpg" data-animate style="transition-delay:200ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
-      <img src="images/orxan-3.jpg" alt="Orxan">
+    <div class="gallery-item" data-img="images/orxan-1.jpg" data-animate style="transition-delay:200ms; --focus: 30% 20%" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-1.jpg" alt="Orxan" loading="lazy">
+      <span class="gallery-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
     </div>
-    <div class="gallery-item" data-img="images/orxan-4.jpg" data-animate style="transition-delay:300ms" tabindex="0" role="button" aria-label="Şəkli böyüt">
-      <img src="images/orxan-4.jpg" alt="Orxan">
+    <div class="gallery-item" data-img="images/orxan-3.jpg" data-animate style="transition-delay:300ms; --focus: center 20%" tabindex="0" role="button" aria-label="Şəkli böyüt">
+      <img src="images/orxan-3.jpg" alt="Orxan" loading="lazy">
+      <span class="gallery-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
     </div>
   </div>
 </section>
@@ -1211,42 +1116,41 @@ h1, h2, h3, h4 {
   <div class="accent-line"></div>
   <div class="transparency-grid">
     <div class="doc-card" data-img="documents/medical-park-paket.jpg" data-animate style="transition-delay:0ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
-      <img class="doc-thumb" src="documents/medical-park-paket.jpg" alt="Medical Park">
-      <div class="doc-label" data-i18n="doc1Label">Medical Park müalicə paketi · 80.000 USD</div>
-      <a class="doc-pdf-link" href="documents/medical-park-paket.pdf" target="_blank" rel="noopener" data-i18n="pdfLink">PDF formatında bütün sənəd</a>
+      <div class="doc-preview">
+        <img class="doc-thumb" src="documents/medical-park-paket.jpg" alt="Medical Park" loading="lazy">
+        <span class="doc-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
+      </div>
+      <div class="doc-meta">
+        <span class="doc-icon" aria-hidden="true"><i class="ti ti-building-hospital"></i></span>
+        <div>
+          <div class="doc-label" data-i18n="doc1Label">Medical Park müalicə paketi · 80.000 USD</div>
+          <a class="doc-pdf-link" href="documents/medical-park-paket.pdf" target="_blank" rel="noopener"><i class="ti ti-file-type-pdf" aria-hidden="true"></i><span data-i18n="pdfLink">PDF formatında bütün sənəd</span></a>
+        </div>
+      </div>
     </div>
     <div class="doc-card" data-img="documents/histoloji-mds-diaqnoz.jpg" data-animate style="transition-delay:100ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
-      <img class="doc-thumb" src="documents/histoloji-mds-diaqnoz.jpg" alt="Histoloji">
-      <div class="doc-label" data-i18n="doc2Label">Histoloji müayinə №140/26 · MDS təsdiqi</div>
+      <div class="doc-preview">
+        <img class="doc-thumb" src="documents/histoloji-mds-diaqnoz.jpg" alt="Histoloji müayinə" loading="lazy">
+        <span class="doc-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
+      </div>
+      <div class="doc-meta">
+        <span class="doc-icon" aria-hidden="true"><i class="ti ti-microscope"></i></span>
+        <div>
+          <div class="doc-label" data-i18n="doc2Label">Histoloji müayinə №140/26 · MDS təsdiqi</div>
+        </div>
+      </div>
     </div>
     <div class="doc-card" data-img="documents/qan-analizi.jpg" data-animate style="transition-delay:200ms" tabindex="0" role="button" aria-label="Sənədi böyüt">
-      <img class="doc-thumb" src="documents/qan-analizi.jpg" alt="Qan analizi">
-      <div class="doc-label" data-i18n="doc3Label">Klinik qan analizi · 14.05.2026</div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-<section class="donation-impact section section-wide">
-  <h2 class="section-heading" data-i18n="impactTitle" data-animate>Bir bağışın həqiqi gücü</h2>
-  <p class="section-subtitle" data-i18n="impactSubtitle">Hər manat Orxanın müalicəsinə birbaşa təsir edir</p>
-  <div class="accent-line"></div>
-  <div class="impact-grid">
-    <div class="impact-card" data-animate style="transition-delay:0ms">
-      <div class="impact-amount">20 AZN</div>
-      <div class="impact-desc" data-i18n="impactDesc1">Bir gün üçün dərman dozası</div>
-    </div>
-    <div class="impact-card" data-animate style="transition-delay:100ms">
-      <div class="impact-amount">100 AZN</div>
-      <div class="impact-desc" data-i18n="impactDesc2">Bir tibbi müayinə</div>
-    </div>
-    <div class="impact-card" data-animate style="transition-delay:200ms">
-      <div class="impact-amount">500 AZN</div>
-      <div class="impact-desc" data-i18n="impactDesc3">Bir həftəlik xəstəxana xərci</div>
-    </div>
-    <div class="impact-card" data-animate style="transition-delay:300ms">
-      <div class="impact-amount">2000 AZN</div>
-      <div class="impact-desc" data-i18n="impactDesc4">Transplantasiya öncəsi hazırlıq</div>
+      <div class="doc-preview">
+        <img class="doc-thumb" src="documents/qan-analizi.jpg" alt="Qan analizi" loading="lazy">
+        <span class="doc-zoom" aria-hidden="true"><i class="ti ti-arrows-maximize"></i></span>
+      </div>
+      <div class="doc-meta">
+        <span class="doc-icon" aria-hidden="true"><i class="ti ti-droplet"></i></span>
+        <div>
+          <div class="doc-label" data-i18n="doc3Label">Klinik qan analizi · 14.05.2026</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
