@@ -434,38 +434,6 @@ h1, h2, h3, h4 {
   .story-body p { font-size: 1rem; }
 }
 
-/* Pull-quote inline in story */
-.pull-quote {
-  position: relative;
-  margin: 2.5rem 0;
-  padding: 1.75rem 1.5rem 1.75rem 2rem;
-  background: var(--bg-warm);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 12px 12px 0;
-}
-.pull-quote::before {
-  content: '\201C';
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 4rem;
-  color: var(--accent-soft);
-  opacity: 0.5;
-  line-height: 1;
-  pointer-events: none;
-}
-.pull-quote p {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-size: 1.125rem;
-  color: var(--text-primary);
-  line-height: 1.6;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
 /* Story-end attribution (letter signature feel) */
 .story-end-attribution {
   margin-top: 2.5rem;
@@ -1122,7 +1090,7 @@ h1, h2, h3, h4 {
   </figure>
 </section>
 
-<!-- STORY (with stats inside, pull-quote, end attribution) -->
+<!-- STORY (with stats inside, end attribution) -->
 <section class="story" id="story">
   <div class="story-inner">
     <h2 class="section-heading" data-i18n="storyTitle" data-animate>Orxanın Hekayəsi</h2>
@@ -1135,11 +1103,6 @@ h1, h2, h3, h4 {
         <p>Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.</p>
         <p>Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.</p>
       </div>
-
-      <!-- Mother's pull-quote inline -->
-      <blockquote class="pull-quote" data-animate>
-        <p data-i18n="motherQuote">Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?</p>
-      </blockquote>
 
       <!-- Story body part 2 -->
       <div data-i18n-html="storyHtml2">
@@ -1359,7 +1322,6 @@ h1, h2, h3, h4 {
       stat4Num: '1', stat4Label: 'BİR HƏYAT',
       storyTitle: 'Orxanın Hekayəsi',
       storyHtml1: '<p>Orxan Muradov hələ 4 yaşındadır. Onun dünyası oyuncaqlarla, gülüşlərlə, kiçik kəşflərlə dolu olmalıydı.</p><p>Amma 3 ay öncə hər şey dəyişdi. Həkimlər diaqnozu açıqladılar: Mielodisplastik Sindrom — leykoz öncül mərhələsində. Bu xəstəlik onun sümük iliyini içəridən sıradan çıxarır.</p><p>Tibbi göstəricilər ağırdır. Hemoglobin normalın yarısından az, trombositlər kritik səviyyədə. Bu rəqəmlər tibbi termin görünə bilər, amma onların arxasında bir körpə var — yorulmuş, amma hələ də əyilməyən.</p>',
-      motherQuote: 'Hər gecə yanında oturub onun nəfəsini dinləyirəm. Allahdan və sizdən başqa kimə üz tutaq?',
       storyHtml2: '<p>Yeganə yol qohum olmayan donordan sümük iliyi transplantasiyasıdır. Medical Park Antalya xəstəxanasında Prof. Dr. Akif Yeşilipek müalicəni qəbul edib. Ümumi xərc: 80.000 USD.</p><p>Ailəsi Sabirabad rayonu, Məmişlər kəndində yaşayır. Bu məbləği ödəmək imkanları yoxdur. Anası Zinyət gecə-gündüz onun yanındadır. Atası Nuru çalışıb-çabalayır, amma bu rəqəm onların gücündən qat-qat çoxdur.</p><p>İndi Orxanın ümidi sizdə — bizdədir. Hər manat onun nəfəs alma şansını artırır.</p>',
       motherName: 'Abdullazadə Zinyət',
       motherRole: 'Orxanın anası',
@@ -1405,7 +1367,6 @@ h1, h2, h3, h4 {
       stat4Num: '1', stat4Label: 'BİR HAYAT',
       storyTitle: 'Orhan\'ın Hikayesi',
       storyHtml1: '<p>Orhan Muradov henüz 4 yaşında. Dünyası oyuncaklarla, gülüşlerle, küçük keşiflerle dolu olmalıydı.</p><p>Ama 3 ay önce her şey değişti. Doktorlar tanıyı açıkladı: Miyelodisplastik Sendrom — lösemi öncesi evrede. Bu hastalık kemik iliğini içeriden tüketiyor.</p><p>Tıbbi göstergeler ağır. Hemoglobin normalin yarısından az, trombositler kritik seviyede. Bu rakamlar tıbbi terim gibi görünebilir, ama arkasında küçük bir çocuk var — yorgun ama hâlâ eğilmeyen.</p>',
-      motherQuote: 'Her gece yanında oturup nefesini dinliyorum. Allah\'tan ve sizden başka kime sığınalım?',
       storyHtml2: '<p>Tek yol akraba olmayan bağışçıdan kemik iliği nakli. Medical Park Antalya hastanesinde Prof. Dr. Akif Yeşilipek tedaviyi kabul etti. Toplam maliyet: 80.000 USD.</p><p>Ailesi Sabirabad ilçesi, Memişler köyünde yaşıyor. Bu meblağı ödeme imkanları yok. Annesi Zinyet gece gündüz yanında. Babası Nuru var gücüyle çalışıyor, ama bu rakam onların gücünün çok üstünde.</p><p>Şimdi Orhan\'ın umudu sizde — bizde. Her manat onun nefes alma şansını artırır.</p>',
       motherName: 'Abdullazade Zinyet',
       motherRole: 'Orhan\'ın annesi',
@@ -1451,7 +1412,6 @@ h1, h2, h3, h4 {
       stat4Num: '1', stat4Label: 'ОДНА ЖИЗНЬ',
       storyTitle: 'История Орхана',
       storyHtml1: '<p>Орхану Мурадову всего 4 года. Его мир должен был быть полон игрушек, смеха и маленьких открытий.</p><p>Но 3 месяца назад всё изменилось. Врачи поставили диагноз: миелодиспластический синдром — предлейкозное состояние. Эта болезнь разрушает его костный мозг изнутри.</p><p>Медицинские показатели тяжёлые. Гемоглобин — меньше половины нормы, тромбоциты — на критическом уровне. За этими цифрами стоит маленький мальчик — уставший, но всё ещё несдающийся.</p>',
-      motherQuote: 'Каждую ночь я сижу рядом и слушаю его дыхание. К кому ещё нам обратиться, кроме Бога и вас?',
       storyHtml2: '<p>Единственный путь — пересадка костного мозга от неродственного донора. В клинике Medical Park Antalya проф. д-р Акиф Йешилипек принял его на лечение. Общая стоимость: 80.000 USD.</p><p>Семья живёт в Сабирабадском районе, в селе Мамишляр. Они не в состоянии оплатить эту сумму. Мама Зинят день и ночь рядом с ним. Отец Нуру старается изо всех сил, но эта сумма во много раз превышает их возможности.</p><p>Сейчас надежда Орхана — на вас, на нас. Каждый манат увеличивает его шанс дышать дальше.</p>',
       motherName: 'Абдуллазаде Зинят',
       motherRole: 'Мама Орхана',
@@ -1497,7 +1457,6 @@ h1, h2, h3, h4 {
       stat4Num: '1', stat4Label: 'ONE LIFE',
       storyTitle: 'Orxan’s Story',
       storyHtml1: '<p>Orxan Muradov is only 4 years old. His world should have been filled with toys, laughter, and small discoveries.</p><p>But 3 months ago, everything changed. The doctors delivered the diagnosis: Myelodysplastic Syndrome — a pre-leukemic state. This disease is destroying his bone marrow from within.</p><p>His medical numbers are grave. Hemoglobin less than half of normal, platelets at a critical level. These figures may look like medical terms, but behind them is a small boy — exhausted, yet still unbroken.</p>',
-      motherQuote: 'Every night I sit beside him, listening to his breathing. Who else can we turn to, but God and you?',
       storyHtml2: '<p>The only path forward is an unrelated-donor bone marrow transplant. At Medical Park Antalya, Prof. Dr. Akif Yeşilipek has accepted him for treatment. Total cost: 80,000 USD.</p><p>His family lives in Sabirabad district, in the village of Məmişlər. They cannot afford this sum. His mother Zinyet sits by his side day and night. His father Nuru works as hard as he can, but this number is far beyond their reach.</p><p>Now Orxan’s hope rests on you — on us. Every manat increases his chance to keep breathing.</p>',
       motherName: 'Abdullazadə Zinyet',
       motherRole: 'Orxan’s mother',
