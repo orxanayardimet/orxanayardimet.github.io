@@ -728,82 +728,150 @@ h1, h2, h3, h4 {
 
 
 /* ─── Bank cards ─── */
-.bank-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-.bank-card {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FBF5EE 100%);
-  border: 0.5px solid var(--border-subtle);
-  border-radius: 12px;
-  overflow: hidden;
+#donation { scroll-margin-top: 56px; }
+.card-holder {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.bank-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43,36,32,0.08);
-}
-.bank-card-accent {
-  height: 4px;
-  background: var(--accent);
-}
-.bank-card-body {
-  padding: 1.25rem 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.bank-name {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-.card-number-box {
-  background: var(--bg-warm);
-  border-radius: 8px;
-  padding: 0.875rem 1rem;
-  text-align: center;
-  margin-bottom: 0.875rem;
-}
-.card-number {
-  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  letter-spacing: 0.05em;
-}
-.copy-btn-full {
-  width: 100%;
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background 0.2s ease;
-  margin-bottom: 0.75rem;
-}
-.copy-btn-full:hover { background: var(--accent-hover); }
-.copy-btn-full.copied { background: #1A9550; }
-.copy-btn-full i { font-size: 16px; }
-.card-holder {
+  width: fit-content;
+  max-width: 100%;
+  margin: -0.75rem auto 2rem;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-body);
   text-align: center;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  margin-top: auto;
+  box-shadow: 0 2px 8px rgba(43,36,32,0.05);
 }
-@media (max-width: 900px) { .bank-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .bank-grid { grid-template-columns: 1fr; } }
+.card-holder i { font-size: 18px; color: var(--teal); flex-shrink: 0; }
+.bank-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.bank-card {
+  --face-a: #3A302A;
+  --face-b: #1E1814;
+  position: relative;
+  aspect-ratio: 1.586;
+  border-radius: 20px;
+  padding: 20px 22px;
+  color: #FFFFFF;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--face-a) 0%, var(--face-b) 100%);
+  box-shadow: 0 2px 4px rgba(43,36,32,0.08), 0 18px 40px -12px rgba(43,36,32,0.35);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
+}
+.bank-card.face-coral { --face-a: #D98472; --face-b: #A65240; }
+.bank-card.face-teal  { --face-a: #6E9C93; --face-b: #3F6A62; }
+/* soft sheen + faint rings for depth */
+.bank-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(255,255,255,0.22) 0%, transparent 55%),
+    radial-gradient(circle at 115% 120%, transparent 38%, rgba(255,255,255,0.07) 38.5%, transparent 39.5%,
+                    transparent 52%, rgba(255,255,255,0.06) 52.5%, transparent 53.5%);
+  pointer-events: none;
+}
+.bank-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(43,36,32,0.08), 0 26px 50px -14px rgba(43,36,32,0.4);
+}
+.bank-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bank-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+.bank-card-top i { font-size: 22px; opacity: 0.85; transform: rotate(90deg); }
+.card-chip {
+  width: 38px;
+  height: 28px;
+  margin-top: auto;
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, transparent 32%, rgba(120,90,40,0.35) 32%, rgba(120,90,40,0.35) 35%, transparent 35%,
+                    transparent 65%, rgba(120,90,40,0.35) 65%, rgba(120,90,40,0.35) 68%, transparent 68%),
+    linear-gradient(180deg, transparent 46%, rgba(120,90,40,0.35) 46%, rgba(120,90,40,0.35) 54%, transparent 54%),
+    linear-gradient(135deg, #F3DDA2 0%, #D9B66A 50%, #F0D38E 100%);
+  box-shadow: inset 0 0 0 1px rgba(120,90,40,0.25);
+}
+.card-number {
+  margin-top: 12px;
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  font-variant-numeric: tabular-nums;
+}
+.bank-card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+.card-owner {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+.copy-btn-full {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.copy-btn-full:hover { background: rgba(255,255,255,0.28); }
+.copy-btn-full:active { transform: scale(0.96); }
+.copy-btn-full:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 2px; }
+.copy-btn-full.copied { background: #1A9550; border-color: #1A9550; }
+.copy-btn-full i { font-size: 16px; }
+@media (max-width: 1000px) {
+  .bank-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .bank-grid { grid-template-columns: 1fr; gap: 16px; max-width: 400px; margin: 0 auto; }
+  .card-holder { font-size: 0.8125rem; margin-bottom: 1.5rem; }
+}
+@media (max-width: 360px) {
+  .bank-card { padding: 16px 18px; }
+  .card-number { font-size: 1.125rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bank-card, .copy-btn-full { transition: none; }
+}
 
 /* ─── Footer ─── */
 .site-footer {
@@ -858,29 +926,58 @@ h1, h2, h3, h4 {
   gap: 14px;
   z-index: 60;
 }
-.cta-cards {
-  background: var(--accent);
-  color: white;
-  padding: 14px 24px;
-  border-radius: 100px;
+/* Bottom dock: "view bank cards" */
+.card-dock {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 59;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: min(420px, calc(100% - 40px));
+  height: 56px;
+  padding: 0 24px;
+  border-radius: 100px;
+  background: var(--bg-dark);
+  color: #FFFFFF;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1;
-  box-shadow: 0 4px 16px rgba(232,155,138,0.4);
-  transition: background 0.2s ease, transform 0.2s ease;
-  animation: soft-pulse 2s ease-in-out infinite;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(43,36,32,0.3), inset 0 0 0 1px rgba(255,255,255,0.06);
+  transform: translate(-50%, calc(100% + 32px));
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, visibility 0s linear 0.45s, background 0.2s ease;
 }
-.cta-cards:hover { background: var(--accent-hover); transform: translateY(-1px); }
-.cta-cards i { font-size: 18px; }
-@keyframes soft-pulse {
-  0%, 100% { box-shadow: 0 4px 16px rgba(232,155,138,0.4), 0 0 0 0 rgba(232,155,138,0.4); }
-  50%      { box-shadow: 0 4px 20px rgba(232,155,138,0.5), 0 0 0 8px rgba(232,155,138,0); }
+.card-dock.visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, visibility 0s, background 0.2s ease;
+}
+.card-dock:hover { background: #3A302A; }
+.card-dock:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.card-dock-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  font-size: 17px;
+}
+.card-dock-arrow { font-size: 18px; opacity: 0.7; animation: dock-nudge 2s ease-in-out infinite; }
+@keyframes dock-nudge {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(3px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cta-cards { animation: none; }
+  .card-dock, .card-dock.visible { transition: opacity 0.2s ease, visibility 0s; }
+  .card-dock-arrow { animation: none; }
 }
 
 .cta-whatsapp {
@@ -909,8 +1006,8 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 768px) {
   .floating-ctas { bottom: 16px; right: 16px; gap: 12px; }
-  .cta-cards { padding: 12px 20px; font-size: 0.9375rem; }
-  .cta-cards i { font-size: 16px; }
+  .card-dock { left: 16px; right: calc(16px + 64px + 12px); width: auto; bottom: 20px; font-size: 0.9375rem; padding: 0 16px; transform: translateY(calc(100% + 32px)); }
+  .card-dock.visible { transform: none; }
   .cta-whatsapp { width: 64px; height: 64px; }
   .cta-whatsapp i { font-size: 28px; }
 }
@@ -1160,47 +1257,54 @@ h1, h2, h3, h4 {
   <h2 class="section-heading" data-i18n="donationTitle" data-animate>Bağışla</h2>
   <p class="section-subtitle" data-i18n="donationSubtitle">Hər kart Orxanın anası Zinyət xanımın adınadır</p>
   <div class="accent-line"></div>
+  <div class="card-holder">
+    <i class="ti ti-user-heart" aria-hidden="true"></i>
+    <span data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</span>
+  </div>
   <div class="bank-grid">
-    <div class="bank-card" data-animate style="transition-delay:0ms">
-      <div class="bank-card-accent"></div>
-      <div class="bank-card-body">
+    <div class="bank-card face-coral" data-animate style="transition-delay:0ms">
+      <div class="bank-card-top">
         <div class="bank-name">Kapital Bank</div>
-        <div class="card-number-box">
-          <div class="card-number">4169 7388 0906 1637</div>
-        </div>
+        <i class="ti ti-wifi" aria-hidden="true"></i>
+      </div>
+      <div class="card-chip" aria-hidden="true"></div>
+      <div class="card-number">4169 7388 0906 1637</div>
+      <div class="bank-card-bottom">
+        <div class="card-owner">Zinyət<br>Abdullazadə</div>
         <button class="copy-btn-full" type="button" data-card="4169738809061637">
           <i class="ti ti-copy" aria-hidden="true"></i>
           <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
-    <div class="bank-card" data-animate style="transition-delay:100ms">
-      <div class="bank-card-accent"></div>
-      <div class="bank-card-body">
+    <div class="bank-card face-teal" data-animate style="transition-delay:100ms">
+      <div class="bank-card-top">
         <div class="bank-name">ABB Bank</div>
-        <div class="card-number-box">
-          <div class="card-number">4127 2093 0893 8742</div>
-        </div>
+        <i class="ti ti-wifi" aria-hidden="true"></i>
+      </div>
+      <div class="card-chip" aria-hidden="true"></div>
+      <div class="card-number">4127 2093 0893 8742</div>
+      <div class="bank-card-bottom">
+        <div class="card-owner">Zinyət<br>Abdullazadə</div>
         <button class="copy-btn-full" type="button" data-card="4127209308938742">
           <i class="ti ti-copy" aria-hidden="true"></i>
           <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
     <div class="bank-card" data-animate style="transition-delay:200ms">
-      <div class="bank-card-accent"></div>
-      <div class="bank-card-body">
+      <div class="bank-card-top">
         <div class="bank-name">LeoBank</div>
-        <div class="card-number-box">
-          <div class="card-number">4098 5844 9938 0952</div>
-        </div>
+        <i class="ti ti-wifi" aria-hidden="true"></i>
+      </div>
+      <div class="card-chip" aria-hidden="true"></div>
+      <div class="card-number">4098 5844 9938 0952</div>
+      <div class="bank-card-bottom">
+        <div class="card-owner">Zinyət<br>Abdullazadə</div>
         <button class="copy-btn-full" type="button" data-card="4098584499380952">
           <i class="ti ti-copy" aria-hidden="true"></i>
           <span class="copy-btn-label" data-i18n="copyBtn">Kopyala</span>
         </button>
-        <div class="card-holder" data-i18n="cardHolder">Kart sahibi: Abdullazadə Zinyət (Anası)</div>
       </div>
     </div>
   </div>
@@ -1217,12 +1321,15 @@ h1, h2, h3, h4 {
   <div class="copyright" data-i18n="footerCopy">© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi</div>
 </footer>
 
+<!-- Bottom dock: appears after a little scroll, hides when the bank cards come into view -->
+<a href="#donation" class="card-dock" id="cardDock">
+  <span class="card-dock-icon" aria-hidden="true"><i class="ti ti-credit-card"></i></span>
+  <span data-i18n="floatingCardBtn">Kart hesablarına bax</span>
+  <i class="ti ti-arrow-down card-dock-arrow" aria-hidden="true"></i>
+</a>
+
 <!-- Floating CTAs -->
 <div class="floating-ctas" role="region" aria-label="Sürətli kömək">
-  <a href="#donation" class="cta-cards">
-    <i class="ti ti-credit-card" aria-hidden="true"></i>
-    <span data-i18n="floatingCardBtn">Kart hesabları</span>
-  </a>
   <a href="https://wa.me/994703955854" class="cta-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
   </a>
@@ -1293,7 +1400,7 @@ h1, h2, h3, h4 {
       cardHolder: 'Kart sahibi: Abdullazadə Zinyət (Anası)',
       footerMessage: 'Orxan üçün dua, dəstək, sevgi.',
       footerCopy: '© 2026 Orxan Muradov üçün toplanan dəstək · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər kəndi',
-      floatingCardBtn: 'Kart hesabları',
+      floatingCardBtn: 'Kart hesablarına bax',
       toastCopied: 'Kart nömrəsi kopyalandı',
       toastCopyError: 'Kopyalama uğursuz oldu',
       metaTitle: 'Orxan Muradov üçün yardım | 4 yaşlı körpəni xilas edək',
@@ -1337,7 +1444,7 @@ h1, h2, h3, h4 {
       cardHolder: 'Kart sahibi: Abdullazade Zinyet (Annesi)',
       footerMessage: 'Orhan için dua, destek, sevgi.',
       footerCopy: '© 2026 Orhan Muradov için toplanan destek · WhatsApp: +994 70 395 58 54 · Sabirabad, Memişler köyü',
-      floatingCardBtn: 'Kart hesapları',
+      floatingCardBtn: 'Kart hesaplarına bak',
       toastCopied: 'Kart numarası kopyalandı',
       toastCopyError: 'Kopyalama başarısız oldu',
       metaTitle: 'Orhan Muradov için yardım | 4 yaşındaki çocuğu kurtaralım',
@@ -1381,7 +1488,7 @@ h1, h2, h3, h4 {
       cardHolder: 'Владелец карты: Абдуллазаде Зинят (Мама)',
       footerMessage: 'За Орхана: молитва, поддержка, любовь.',
       footerCopy: '© 2026 Сбор средств для Орхана Мурадова · WhatsApp: +994 70 395 58 54 · Сабирабад, село Мамишляр',
-      floatingCardBtn: 'Реквизиты карт',
+      floatingCardBtn: 'Посмотреть реквизиты карт',
       toastCopied: 'Номер карты скопирован',
       toastCopyError: 'Не удалось скопировать',
       metaTitle: 'Помощь Орхану Мурадову | Спасём 4-летнего мальчика',
@@ -1425,7 +1532,7 @@ h1, h2, h3, h4 {
       cardHolder: 'Cardholder: Abdullazadə Zinyet (Mother)',
       footerMessage: 'For Orxan: prayer, support, love.',
       footerCopy: '© 2026 Support raised for Orxan Muradov · WhatsApp: +994 70 395 58 54 · Sabirabad, Məmişlər village',
-      floatingCardBtn: 'Bank cards',
+      floatingCardBtn: 'View bank cards',
       toastCopied: 'Card number copied',
       toastCopyError: 'Copy failed',
       metaTitle: 'Help Orxan Muradov | Save a 4-year-old boy',
@@ -1777,6 +1884,29 @@ h1, h2, h3, h4 {
     update();
   })();
 
+  // ═══════════ CARD DOCK ═══════════
+  // Shown once the visitor scrolls a little; hidden as soon as the bank cards section comes into view.
+  function setupCardDock() {
+    const dock = document.getElementById('cardDock');
+    const target = document.getElementById('donation');
+    if (!dock || !target) return;
+    let ticking = false;
+    function update() {
+      const scrolled = window.scrollY > 160;
+      const reachedCards = target.getBoundingClientRect().top < window.innerHeight - 80;
+      dock.classList.toggle('visible', scrolled && !reachedCards);
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  }
+
   // ═══════════ DOMContentLoaded ═══════════
   document.addEventListener('DOMContentLoaded', function () {
     let saved = 'az';
@@ -1790,6 +1920,7 @@ h1, h2, h3, h4 {
 
     setupCopyButtons();
     setupLightbox();
+    setupCardDock();
     setupStatsObserver();
 
     // Initialize stats at 0
